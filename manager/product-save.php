@@ -24,7 +24,7 @@
             echo "<meta http-equiv='refresh' content='0;url=pages-product.php'>";
         }
         else {
-            echo "Failed to add your New Product!!!".mysql_error();
+            echo "Failed to add your New Product!!!".mysqli_error($DB_CONNECT);
         }
     }
 ?>

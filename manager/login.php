@@ -13,8 +13,8 @@
 
 
 
-  <script src="../js/jquery-2.1.4.min.js"></script>
-
+  <script src="../assets/js/jquery-1.11.1.min.js"></script>
+  <script src="js/custom.js"></script>
   <style type="text/css">
        body{
           background: url(../images/bg.jpg);
@@ -42,51 +42,18 @@
   </style>
 </head>
 <body>
+div.
   <div class="container">
   <div class="row">
         <div class="col-md-12">
         <div class="tab-content" style="margin-top: -10px;">
         <div id="login" class="tab-pane active">
-            <form class="form-signin" method="post" action="">
-            
-                <!-- Login Form -->
-                <?php
-
-                    if (isset($_POST['buttonSubmit'])) {
-                        $inputUsername = $_POST['inputUsername'];
-                        $inputPassword = $_POST['inputPassword'];
-                        // $sqlNumRows = 0;
-
-                        $sqlQuery = mysqli_query($DB_CONNECT,"SELECT * FROM admin_tb WHERE username='$inputUsername' AND password='$inputPassword' ");
-
-                        // $sqlNumRows = mysql_num_rows($sqlQuery);
-                        $sqlFetch = mysqli_fetch_array($sqlQuery);
-
-                        if($inputUsername=$sqlFetch['username'] && $inputPassword=$sqlFetch['password'] ){
-                            session_start();
-                            $_SESSION['USER_ID'] = $sqlFetch['adminID'];
-
-                            echo "<meta http-equiv='refresh' content='0;url=index.php'>";
-                            // echo("Successfully Logged In");
-                        }
-                        else { 
-                            ?>
-                                <script>
-                                    window.alert("Sorry! Type the correct Email Address or Password");
-                                </script>
-                            <?php
-                        }
-                        
-                    }
-                        
-
-                ?>
-              <!-- Registration Form -->
-              
-                    <h2><center>MANAGER LOGIN</center></h2><hr>
+            <form class="form-signin loginForm" method="post" action="validation/va-login.php" redirectTo='index'>
+                <h2><center>MANAGER LOGIN</center></h2><hr>
                 <input type="text" placeholder="Username" name="inputUsername" class="form-control" required/><br>
                 
                 <input type="password" placeholder="Password" name="inputPassword" class="form-control" required/>
+                <input type="hidden" name="issubmit" class="hidden">
                 <button class="btn text-muted btn-block text-center btn-primary" name="buttonSubmit" type="submit"><span class="icon-key"></span> LogIn</button>
             </form>
         </div>
