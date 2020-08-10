@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $(".loginForm").submit(function (e) { 
+    $(".form").submit(function (e) { 
         e.preventDefault();
         var form=$(this).serialize();
         var action=$(this).attr("action");
@@ -17,6 +17,9 @@ $(document).ready(function () {
             success: function (response) {
                 if(response=='access'){
                     location.href=redirectTo+'.php';
+                }
+                else{
+                    alert("something went wrong");
                 }
             }
         });

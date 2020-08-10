@@ -10,9 +10,6 @@
     <link rel="stylesheet" href="../css/style2.css">
     <link rel="stylesheet" href="../font-awesome.css" />
     <link rel="stylesheet" href="../css/login.css" />
-
-
-
   <script src="../assets/js/jquery-1.11.1.min.js"></script>
   <script src="js/custom.js"></script>
   <style type="text/css">
@@ -42,13 +39,12 @@
   </style>
 </head>
 <body>
-div.
   <div class="container">
   <div class="row">
         <div class="col-md-12">
         <div class="tab-content" style="margin-top: -10px;">
         <div id="login" class="tab-pane active">
-            <form class="form-signin loginForm" method="post" action="validation/va-login.php" redirectTo='index'>
+            <form class="form-signin form" method="post" action="validation/va-login.php" redirectTo='index'>
                 <h2><center>MANAGER LOGIN</center></h2><hr>
                 <input type="text" placeholder="Username" name="inputUsername" class="form-control" required/><br>
                 
