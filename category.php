@@ -8,7 +8,7 @@
     <div class="breadcrumb-inner">
       <ul class="list-inline list-unstyled">
         <li><a href="#">Home</a></li>
-        <li class='active'>Handbags</li>
+        <li class='active'>Category</li>
       </ul>
     </div>
     <!-- /.breadcrumb-inner --> 
@@ -21,13 +21,27 @@
     <div class='row'>
       <!-- ======================================== SIDE-BAR ===================================================== -->
       
-      <?php include './include/category-sidebar.php'; ?>
+      <?php include './include/side-bar.php'; ?>
 
       <!-- ======================================== SIDE-BAR : END ===================================================== -->
 
       <div class='col-md-9'> 
         <!-- ========================================== SECTION – HERO ========================================= -->
-
+        <div id="category" class="category-carousel hidden-xs">
+          <div class="item">
+            <div class="image"> <img src="assets/images/banners/cat-banner-1.jpg" alt="" class="img-responsive"> </div>
+            <div class="container-fluid">
+              <div class="caption vertical-top text-left">
+                <div class="big-text"> Big Sale </div>
+                <div class="excerpt hidden-sm hidden-md"> Save up to 49% off </div>
+                <div class="excerpt-normal hidden-sm hidden-md"> Lorem ipsum dolor sit amet, consectetur adipiscing elit </div>
+              </div>
+              <!-- /.caption --> 
+            </div>
+            <!-- /.container-fluid --> 
+          </div>
+        </div>
+        
         <div class="clearfix filters-container m-t-10">
           <div class="row">
             <div class="col col-sm-6 col-md-2">
@@ -111,7 +125,7 @@
                     <div class="products">
                       <div class="product">
                         <div class="product-image">
-                          <div class="image"> <a href="detail.html"><img  src="assets/images/products/p5.jpg" alt=""></a> </div>
+                          <div class="image"> <a href="detail.php"><img  src="assets/images/products/p5.jpg" alt=""></a> </div>
                           <!-- /.image -->
                           
                           <div class="tag new"><span>new</span></div>
@@ -119,7 +133,7 @@
                         <!-- /.product-image -->
                         
                         <div class="product-info text-left">
-                          <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
+                          <h3 class="name"><a href="detail.php">Floral Print Buttoned</a></h3>
                           <div class="rating rateit-small"></div>
                           <div class="description"></div>
                           <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
@@ -134,8 +148,8 @@
                                 <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
                                 <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
                               </li>
-                              <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                              <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal"></i> </a> </li>
+                              <li class="lnk wishlist"> <a class="add-to-cart" href="detail.php" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
+                              <li class="lnk"> <a class="add-to-cart" href="detail.php" title="Compare"> <i class="fa fa-signal"></i> </a> </li>
                             </ul>
                           </div>
                           <!-- /.action --> 
@@ -153,7 +167,7 @@
                     <div class="products">
                       <div class="product">
                         <div class="product-image">
-                          <div class="image"> <a href="detail.html"><img  src="assets/images/products/p1.jpg" alt=""></a> </div>
+                          <div class="image"> <a href="detail.php"><img  src="assets/images/products/p1.jpg" alt=""></a> </div>
                           <!-- /.image -->
                           
                           <div class="tag sale"><span>sale</span></div>
@@ -161,7 +175,7 @@
                         <!-- /.product-image -->
                         
                         <div class="product-info text-left">
-                          <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
+                          <h3 class="name"><a href="detail.php">Floral Print Buttoned</a></h3>
                           <div class="rating rateit-small"></div>
                           <div class="description"></div>
                           <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
@@ -176,8 +190,8 @@
                                 <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
                                 <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
                               </li>
-                              <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                              <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal"></i> </a> </li>
+                              <li class="lnk wishlist"> <a class="add-to-cart" href="detail.php" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
+                              <li class="lnk"> <a class="add-to-cart" href="detail.php" title="Compare"> <i class="fa fa-signal"></i> </a> </li>
                             </ul>
                           </div>
                           <!-- /.action --> 
@@ -195,7 +209,7 @@
                     <div class="products">
                       <div class="product">
                         <div class="product-image">
-                          <div class="image"> <a href="detail.html"><img  src="assets/images/products/p6.jpg" alt=""></a> </div>
+                          <div class="image"> <a href="detail.php"><img  src="assets/images/products/p6.jpg" alt=""></a> </div>
                           <!-- /.image -->
                           
                           <div class="tag hot"><span>hot</span></div>
@@ -203,7 +217,7 @@
                         <!-- /.product-image -->
                         
                         <div class="product-info text-left">
-                          <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
+                          <h3 class="name"><a href="detail.php">Floral Print Buttoned</a></h3>
                           <div class="rating rateit-small"></div>
                           <div class="description"></div>
                           <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
@@ -218,8 +232,8 @@
                                 <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
                                 <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
                               </li>
-                              <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                              <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal"></i> </a> </li>
+                              <li class="lnk wishlist"> <a class="add-to-cart" href="detail.php" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
+                              <li class="lnk"> <a class="add-to-cart" href="detail.php" title="Compare"> <i class="fa fa-signal"></i> </a> </li>
                             </ul>
                           </div>
                           <!-- /.action --> 
@@ -237,7 +251,7 @@
                     <div class="products">
                       <div class="product">
                         <div class="product-image">
-                          <div class="image"> <a href="detail.html"><img  src="assets/images/products/p6.jpg" alt=""></a> </div>
+                          <div class="image"> <a href="detail.php"><img  src="assets/images/products/p6.jpg" alt=""></a> </div>
                           <!-- /.image -->
                           
                           <div class="tag hot"><span>hot</span></div>
@@ -245,7 +259,7 @@
                         <!-- /.product-image -->
                         
                         <div class="product-info text-left">
-                          <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
+                          <h3 class="name"><a href="detail.php">Floral Print Buttoned</a></h3>
                           <div class="rating rateit-small"></div>
                           <div class="description"></div>
                           <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
@@ -260,8 +274,8 @@
                                 <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
                                 <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
                               </li>
-                              <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                              <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal"></i> </a> </li>
+                              <li class="lnk wishlist"> <a class="add-to-cart" href="detail.php" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
+                              <li class="lnk"> <a class="add-to-cart" href="detail.php" title="Compare"> <i class="fa fa-signal"></i> </a> </li>
                             </ul>
                           </div>
                           <!-- /.action --> 
@@ -279,7 +293,7 @@
                     <div class="products">
                       <div class="product">
                         <div class="product-image">
-                          <div class="image"> <a href="detail.html"><img  src="assets/images/products/p7.jpg" alt=""></a> </div>
+                          <div class="image"> <a href="detail.php"><img  src="assets/images/products/p7.jpg" alt=""></a> </div>
                           <!-- /.image -->
                           
                           <div class="tag sale"><span>sale</span></div>
@@ -287,7 +301,7 @@
                         <!-- /.product-image -->
                         
                         <div class="product-info text-left">
-                          <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
+                          <h3 class="name"><a href="detail.php">Floral Print Buttoned</a></h3>
                           <div class="rating rateit-small"></div>
                           <div class="description"></div>
                           <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
@@ -302,8 +316,8 @@
                                 <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
                                 <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
                               </li>
-                              <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                              <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal"></i> </a> </li>
+                              <li class="lnk wishlist"> <a class="add-to-cart" href="detail.php" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
+                              <li class="lnk"> <a class="add-to-cart" href="detail.php" title="Compare"> <i class="fa fa-signal"></i> </a> </li>
                             </ul>
                           </div>
                           <!-- /.action --> 
@@ -321,7 +335,7 @@
                     <div class="products">
                       <div class="product">
                         <div class="product-image">
-                          <div class="image"> <a href="detail.html"><img  src="assets/images/products/p8.jpg" alt=""></a> </div>
+                          <div class="image"> <a href="detail.php"><img  src="assets/images/products/p8.jpg" alt=""></a> </div>
                           <!-- /.image -->
                           
                           <div class="tag new"><span>new</span></div>
@@ -329,7 +343,7 @@
                         <!-- /.product-image -->
                         
                         <div class="product-info text-left">
-                          <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
+                          <h3 class="name"><a href="detail.php">Floral Print Buttoned</a></h3>
                           <div class="rating rateit-small"></div>
                           <div class="description"></div>
                           <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
@@ -344,8 +358,8 @@
                                 <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
                                 <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
                               </li>
-                              <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                              <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal"></i> </a> </li>
+                              <li class="lnk wishlist"> <a class="add-to-cart" href="detail.php" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
+                              <li class="lnk"> <a class="add-to-cart" href="detail.php" title="Compare"> <i class="fa fa-signal"></i> </a> </li>
                             </ul>
                           </div>
                           <!-- /.action --> 
@@ -363,7 +377,7 @@
                     <div class="products">
                       <div class="product">
                         <div class="product-image">
-                          <div class="image"> <a href="detail.html"><img  src="assets/images/products/p9.jpg" alt=""></a> </div>
+                          <div class="image"> <a href="detail.php"><img  src="assets/images/products/p9.jpg" alt=""></a> </div>
                           <!-- /.image -->
                           
                           <div class="tag new"><span>new</span></div>
@@ -371,7 +385,7 @@
                         <!-- /.product-image -->
                         
                         <div class="product-info text-left">
-                          <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
+                          <h3 class="name"><a href="detail.php">Floral Print Buttoned</a></h3>
                           <div class="rating rateit-small"></div>
                           <div class="description"></div>
                           <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
@@ -386,8 +400,8 @@
                                 <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
                                 <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
                               </li>
-                              <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                              <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal"></i> </a> </li>
+                              <li class="lnk wishlist"> <a class="add-to-cart" href="detail.php" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
+                              <li class="lnk"> <a class="add-to-cart" href="detail.php" title="Compare"> <i class="fa fa-signal"></i> </a> </li>
                             </ul>
                           </div>
                           <!-- /.action --> 
@@ -405,7 +419,7 @@
                     <div class="products">
                       <div class="product">
                         <div class="product-image">
-                          <div class="image"> <a href="detail.html"><img  src="assets/images/products/p10.jpg" alt=""></a> </div>
+                          <div class="image"> <a href="detail.php"><img  src="assets/images/products/p10.jpg" alt=""></a> </div>
                           <!-- /.image -->
                           
                           <div class="tag sale"><span>sale</span></div>
@@ -413,7 +427,7 @@
                         <!-- /.product-image -->
                         
                         <div class="product-info text-left">
-                          <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
+                          <h3 class="name"><a href="detail.php">Floral Print Buttoned</a></h3>
                           <div class="rating rateit-small"></div>
                           <div class="description"></div>
                           <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
@@ -428,8 +442,8 @@
                                 <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
                                 <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
                               </li>
-                              <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                              <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal"></i> </a> </li>
+                              <li class="lnk wishlist"> <a class="add-to-cart" href="detail.php" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
+                              <li class="lnk"> <a class="add-to-cart" href="detail.php" title="Compare"> <i class="fa fa-signal"></i> </a> </li>
                             </ul>
                           </div>
                           <!-- /.action --> 
@@ -447,7 +461,7 @@
                     <div class="products">
                       <div class="product">
                         <div class="product-image">
-                          <div class="image"> <a href="detail.html"><img  src="assets/images/products/p2.jpg" alt=""></a> </div>
+                          <div class="image"> <a href="detail.php"><img  src="assets/images/products/p2.jpg" alt=""></a> </div>
                           <!-- /.image -->
                           
                           <div class="tag hot"><span>hot</span></div>
@@ -455,7 +469,7 @@
                         <!-- /.product-image -->
                         
                         <div class="product-info text-left">
-                          <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
+                          <h3 class="name"><a href="detail.php">Floral Print Buttoned</a></h3>
                           <div class="rating rateit-small"></div>
                           <div class="description"></div>
                           <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
@@ -470,8 +484,8 @@
                                 <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
                                 <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
                               </li>
-                              <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                              <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal"></i> </a> </li>
+                              <li class="lnk wishlist"> <a class="add-to-cart" href="detail.php" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
+                              <li class="lnk"> <a class="add-to-cart" href="detail.php" title="Compare"> <i class="fa fa-signal"></i> </a> </li>
                             </ul>
                           </div>
                           <!-- /.action --> 
@@ -489,7 +503,7 @@
                     <div class="products">
                       <div class="product">
                         <div class="product-image">
-                          <div class="image"> <a href="detail.html"><img  src="assets/images/products/p11.jpg" alt=""></a> </div>
+                          <div class="image"> <a href="detail.php"><img  src="assets/images/products/p11.jpg" alt=""></a> </div>
                           <!-- /.image -->
                           
                           <div class="tag new"><span>new</span></div>
@@ -497,7 +511,7 @@
                         <!-- /.product-image -->
                         
                         <div class="product-info text-left">
-                          <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
+                          <h3 class="name"><a href="detail.php">Floral Print Buttoned</a></h3>
                           <div class="rating rateit-small"></div>
                           <div class="description"></div>
                           <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
@@ -512,8 +526,8 @@
                                 <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
                                 <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
                               </li>
-                              <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                              <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal"></i> </a> </li>
+                              <li class="lnk wishlist"> <a class="add-to-cart" href="detail.php" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
+                              <li class="lnk"> <a class="add-to-cart" href="detail.php" title="Compare"> <i class="fa fa-signal"></i> </a> </li>
                             </ul>
                           </div>
                           <!-- /.action --> 
@@ -531,7 +545,7 @@
                     <div class="products">
                       <div class="product">
                         <div class="product-image">
-                          <div class="image"> <a href="detail.html"><img  src="assets/images/products/p12.jpg" alt=""></a> </div>
+                          <div class="image"> <a href="detail.php"><img  src="assets/images/products/p12.jpg" alt=""></a> </div>
                           <!-- /.image -->
                           
                           <div class="tag sale"><span>sale</span></div>
@@ -539,7 +553,7 @@
                         <!-- /.product-image -->
                         
                         <div class="product-info text-left">
-                          <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
+                          <h3 class="name"><a href="detail.php">Floral Print Buttoned</a></h3>
                           <div class="rating rateit-small"></div>
                           <div class="description"></div>
                           <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
@@ -554,8 +568,8 @@
                                 <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
                                 <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
                               </li>
-                              <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                              <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal"></i> </a> </li>
+                              <li class="lnk wishlist"> <a class="add-to-cart" href="detail.php" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
+                              <li class="lnk"> <a class="add-to-cart" href="detail.php" title="Compare"> <i class="fa fa-signal"></i> </a> </li>
                             </ul>
                           </div>
                           <!-- /.action --> 
@@ -573,7 +587,7 @@
                     <div class="products">
                       <div class="product">
                         <div class="product-image">
-                          <div class="image"> <a href="detail.html"><img  src="assets/images/products/p14.jpg" alt=""></a> </div>
+                          <div class="image"> <a href="detail.php"><img  src="assets/images/products/p14.jpg" alt=""></a> </div>
                           <!-- /.image -->
                           
                           <div class="tag hot"><span>hot</span></div>
@@ -581,7 +595,7 @@
                         <!-- /.product-image -->
                         
                         <div class="product-info text-left">
-                          <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
+                          <h3 class="name"><a href="detail.php">Floral Print Buttoned</a></h3>
                           <div class="rating rateit-small"></div>
                           <div class="description"></div>
                           <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
@@ -596,8 +610,8 @@
                                 <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
                                 <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
                               </li>
-                              <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                              <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal"></i> </a> </li>
+                              <li class="lnk wishlist"> <a class="add-to-cart" href="detail.php" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
+                              <li class="lnk"> <a class="add-to-cart" href="detail.php" title="Compare"> <i class="fa fa-signal"></i> </a> </li>
                             </ul>
                           </div>
                           <!-- /.action --> 
@@ -633,7 +647,7 @@
                         <!-- /.col -->
                         <div class="col col-sm-8 col-lg-8">
                           <div class="product-info">
-                            <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
+                            <h3 class="name"><a href="detail.php">Floral Print Buttoned</a></h3>
                             <div class="rating rateit-small"></div>
                             <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
                             <!-- /.product-price -->
@@ -645,8 +659,8 @@
                                     <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
                                     <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
                                   </li>
-                                  <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                                  <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal"></i> </a> </li>
+                                  <li class="lnk wishlist"> <a class="add-to-cart" href="detail.php" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
+                                  <li class="lnk"> <a class="add-to-cart" href="detail.php" title="Compare"> <i class="fa fa-signal"></i> </a> </li>
                                 </ul>
                               </div>
                               <!-- /.action --> 
@@ -680,7 +694,7 @@
                         <!-- /.col -->
                         <div class="col col-sm-8 col-lg-8">
                           <div class="product-info">
-                            <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
+                            <h3 class="name"><a href="detail.php">Floral Print Buttoned</a></h3>
                             <div class="rating rateit-small"></div>
                             <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
                             <!-- /.product-price -->
@@ -692,8 +706,8 @@
                                     <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
                                     <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
                                   </li>
-                                  <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                                  <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal"></i> </a> </li>
+                                  <li class="lnk wishlist"> <a class="add-to-cart" href="detail.php" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
+                                  <li class="lnk"> <a class="add-to-cart" href="detail.php" title="Compare"> <i class="fa fa-signal"></i> </a> </li>
                                 </ul>
                               </div>
                               <!-- /.action --> 
@@ -727,7 +741,7 @@
                         <!-- /.col -->
                         <div class="col col-sm-8 col-lg-8">
                           <div class="product-info">
-                            <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
+                            <h3 class="name"><a href="detail.php">Floral Print Buttoned</a></h3>
                             <div class="rating rateit-small"></div>
                             <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
                             <!-- /.product-price -->
@@ -739,8 +753,8 @@
                                     <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
                                     <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
                                   </li>
-                                  <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                                  <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal"></i> </a> </li>
+                                  <li class="lnk wishlist"> <a class="add-to-cart" href="detail.php" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
+                                  <li class="lnk"> <a class="add-to-cart" href="detail.php" title="Compare"> <i class="fa fa-signal"></i> </a> </li>
                                 </ul>
                               </div>
                               <!-- /.action --> 
@@ -774,7 +788,7 @@
                         <!-- /.col -->
                         <div class="col col-sm-8 col-lg-8">
                           <div class="product-info">
-                            <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
+                            <h3 class="name"><a href="detail.php">Floral Print Buttoned</a></h3>
                             <div class="rating rateit-small"></div>
                             <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
                             <!-- /.product-price -->
@@ -786,8 +800,8 @@
                                     <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
                                     <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
                                   </li>
-                                  <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                                  <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal"></i> </a> </li>
+                                  <li class="lnk wishlist"> <a class="add-to-cart" href="detail.php" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
+                                  <li class="lnk"> <a class="add-to-cart" href="detail.php" title="Compare"> <i class="fa fa-signal"></i> </a> </li>
                                 </ul>
                               </div>
                               <!-- /.action --> 
@@ -821,7 +835,7 @@
                         <!-- /.col -->
                         <div class="col col-sm-8 col-lg-8">
                           <div class="product-info">
-                            <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
+                            <h3 class="name"><a href="detail.php">Floral Print Buttoned</a></h3>
                             <div class="rating rateit-small"></div>
                             <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
                             <!-- /.product-price -->
@@ -833,8 +847,8 @@
                                     <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
                                     <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
                                   </li>
-                                  <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                                  <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal"></i> </a> </li>
+                                  <li class="lnk wishlist"> <a class="add-to-cart" href="detail.php" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
+                                  <li class="lnk"> <a class="add-to-cart" href="detail.php" title="Compare"> <i class="fa fa-signal"></i> </a> </li>
                                 </ul>
                               </div>
                               <!-- /.action --> 
@@ -868,7 +882,7 @@
                         <!-- /.col -->
                         <div class="col col-sm-8 col-lg-8">
                           <div class="product-info">
-                            <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
+                            <h3 class="name"><a href="detail.php">Floral Print Buttoned</a></h3>
                             <div class="rating rateit-small"></div>
                             <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
                             <!-- /.product-price -->
@@ -880,8 +894,8 @@
                                     <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
                                     <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
                                   </li>
-                                  <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                                  <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal"></i> </a> </li>
+                                  <li class="lnk wishlist"> <a class="add-to-cart" href="detail.php" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
+                                  <li class="lnk"> <a class="add-to-cart" href="detail.php" title="Compare"> <i class="fa fa-signal"></i> </a> </li>
                                 </ul>
                               </div>
                               <!-- /.action --> 
@@ -915,7 +929,7 @@
                         <!-- /.col -->
                         <div class="col col-sm-8 col-lg-8">
                           <div class="product-info">
-                            <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
+                            <h3 class="name"><a href="detail.php">Floral Print Buttoned</a></h3>
                             <div class="rating rateit-small"></div>
                             <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
                             <!-- /.product-price -->
@@ -927,8 +941,8 @@
                                     <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
                                     <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
                                   </li>
-                                  <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                                  <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal"></i> </a> </li>
+                                  <li class="lnk wishlist"> <a class="add-to-cart" href="detail.php" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
+                                  <li class="lnk"> <a class="add-to-cart" href="detail.php" title="Compare"> <i class="fa fa-signal"></i> </a> </li>
                                 </ul>
                               </div>
                               <!-- /.action --> 
@@ -962,7 +976,7 @@
                         <!-- /.col -->
                         <div class="col col-sm-8 col-lg-8">
                           <div class="product-info">
-                            <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
+                            <h3 class="name"><a href="detail.php">Floral Print Buttoned</a></h3>
                             <div class="rating rateit-small"></div>
                             <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
                             <!-- /.product-price -->
@@ -974,8 +988,8 @@
                                     <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
                                     <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
                                   </li>
-                                  <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                                  <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal"></i> </a> </li>
+                                  <li class="lnk wishlist"> <a class="add-to-cart" href="detail.php" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
+                                  <li class="lnk"> <a class="add-to-cart" href="detail.php" title="Compare"> <i class="fa fa-signal"></i> </a> </li>
                                 </ul>
                               </div>
                               <!-- /.action --> 
@@ -1009,7 +1023,7 @@
                         <!-- /.col -->
                         <div class="col col-sm-8 col-lg-8">
                           <div class="product-info">
-                            <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
+                            <h3 class="name"><a href="detail.php">Floral Print Buttoned</a></h3>
                             <div class="rating rateit-small"></div>
                             <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
                             <!-- /.product-price -->
@@ -1021,8 +1035,8 @@
                                     <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
                                     <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
                                   </li>
-                                  <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                                  <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal"></i> </a> </li>
+                                  <li class="lnk wishlist"> <a class="add-to-cart" href="detail.php" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
+                                  <li class="lnk"> <a class="add-to-cart" href="detail.php" title="Compare"> <i class="fa fa-signal"></i> </a> </li>
                                 </ul>
                               </div>
                               <!-- /.action --> 
@@ -1056,7 +1070,7 @@
                         <!-- /.col -->
                         <div class="col col-sm-8 col-lg-8">
                           <div class="product-info">
-                            <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
+                            <h3 class="name"><a href="detail.php">Floral Print Buttoned</a></h3>
                             <div class="rating rateit-small"></div>
                             <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
                             <!-- /.product-price -->
@@ -1068,8 +1082,8 @@
                                     <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
                                     <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
                                   </li>
-                                  <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                                  <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal"></i> </a> </li>
+                                  <li class="lnk wishlist"> <a class="add-to-cart" href="detail.php" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
+                                  <li class="lnk"> <a class="add-to-cart" href="detail.php" title="Compare"> <i class="fa fa-signal"></i> </a> </li>
                                 </ul>
                               </div>
                               <!-- /.action --> 
@@ -1103,7 +1117,7 @@
                         <!-- /.col -->
                         <div class="col col-sm-8 col-lg-8">
                           <div class="product-info">
-                            <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
+                            <h3 class="name"><a href="detail.php">Floral Print Buttoned</a></h3>
                             <div class="rating rateit-small"></div>
                             <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
                             <!-- /.product-price -->
@@ -1115,8 +1129,8 @@
                                     <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
                                     <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
                                   </li>
-                                  <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                                  <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal"></i> </a> </li>
+                                  <li class="lnk wishlist"> <a class="add-to-cart" href="detail.php" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
+                                  <li class="lnk"> <a class="add-to-cart" href="detail.php" title="Compare"> <i class="fa fa-signal"></i> </a> </li>
                                 </ul>
                               </div>
                               <!-- /.action --> 
@@ -1150,7 +1164,7 @@
                         <!-- /.col -->
                         <div class="col col-sm-8 col-lg-8">
                           <div class="product-info">
-                            <h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
+                            <h3 class="name"><a href="detail.php">Floral Print Buttoned</a></h3>
                             <div class="rating rateit-small"></div>
                             <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
                             <!-- /.product-price -->
@@ -1162,8 +1176,8 @@
                                     <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
                                     <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
                                   </li>
-                                  <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                                  <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal"></i> </a> </li>
+                                  <li class="lnk wishlist"> <a class="add-to-cart" href="detail.php" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
+                                  <li class="lnk"> <a class="add-to-cart" href="detail.php" title="Compare"> <i class="fa fa-signal"></i> </a> </li>
                                 </ul>
                               </div>
                               <!-- /.action --> 
@@ -1218,7 +1232,7 @@
     <!-- /.row --> 
     <!-- ============================================== BRANDS CAROUSEL ============================================== -->
       <?php include './include/brand.php'; ?>
-    <!-- ============================================== BRANDS CAROUSEL : END ============================================== --> </div>
+    <!-- =========================================== BRANDS CAROUSEL : END ======================================== --> </div>
   <!-- /.container --> 
   
 </div>
