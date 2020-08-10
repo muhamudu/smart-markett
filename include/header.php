@@ -23,6 +23,7 @@
 <link rel="stylesheet" href="assets/css/animate.min.css">
 <link rel="stylesheet" href="assets/css/rateit.css">
 <link rel="stylesheet" href="assets/css/bootstrap-select.min.css">
+<link href="assets/css/lightbox.css" rel="stylesheet">
 
 <!-- Icons/Glyphs -->
 <link rel="stylesheet" href="assets/css/font-awesome.css">
@@ -40,17 +41,6 @@
   <div class="top-bar animate-dropdown">
     <div class="container">
       <div class="header-top-inner">
-        <div class="cnt-account">
-          <ul class="list-unstyled">
-            <li><a href="#"><i class="icon fa fa-user"></i>My Account</a></li>
-            <li><a href="#"><i class="icon fa fa-heart"></i>Wishlist</a></li>
-            <li><a href="#"><i class="icon fa fa-lock"></i>Login</a></li>
-            <li><a href="#"><i class="icon fa fa-info"></i>About</a></li>
-            <li><a href="#"><i class="icon fa fa-phone"></i>+250 780 206 281</a></li>
-            <li><a href="mail:smartmarket@gmail.com"><i class="icon fa fa-envelope"></i>smartmarket@gmail.com</a></li>
-          </ul>
-        </div>
-        <!-- /.cnt-account -->
         
         <div class="cnt-block">
           <ul class="list-unstyled list-inline">
@@ -68,10 +58,27 @@
                 <li><a href="#">Kiswahili</a></li>
               </ul>
             </li>
+            <li class="dropdown dropdown-small"> <a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown"><span class="value"><i class="icon fa fa-user"></i>  My Account </span><b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Create New Accoun</a></li>
+                
+              </ul>
+            </li>
           </ul>
           <!-- /.list-unstyled --> 
         </div>
         <!-- /.cnt-cart -->
+
+        <div class="cnt-account">
+          <ul class="list-unstyled">
+            <li><a href="#"><i class="icon fa fa-phone"></i>+250 780 206 281</a></li>
+            <li><a href="mail:smartmarket@gmail.com"><i class="icon fa fa-envelope"></i>smartmarket@gmail.com</a></li>
+            <li><a href="#"><i class="icon fa fa-heart"></i>Wishlist</a></li>
+            <li><a href="#"></a></li>
+          </ul>
+        </div>
+        <!-- /.cnt-account -->
         <div class="clearfix"></div>
       </div>
       <!-- /.header-top-inner --> 
@@ -146,7 +153,7 @@
                 <div class="clearfix cart-total">
                   <div class="pull-right"> <span class="text">Sub Total :</span><span class='price'>$600.00</span> </div>
                   <div class="clearfix"></div>
-                  <a href="checkout.html" class="btn btn-upper btn-primary btn-block m-t-20">Checkout</a> </div>
+                  <a href="checkout.php" class="btn btn-upper btn-primary btn-block m-t-20">Checkout</a> </div>
                 <!-- /.cart-total--> 
                 
               </li>
@@ -178,32 +185,7 @@
           <div class="navbar-collapse collapse" id="mc-horizontal-menu-collapse">
             <div class="nav-outer">
               <ul class="nav navbar-nav">
-              <li class="dropdown active"> <a href="index.php" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">Categories</a>
-                  <ul class="dropdown-menu pages">
-                    <li>
-                      <div class="yamm-content">
-                        <div class="row">
-                          <div class="col-xs-12 col-menu">
-                            <ul class="links">
-                              <li><a href="category.php">Electronics</a></li>
-                              <li><a href="category.php">Clothes</a></li>
-                              <li><a href="category.php">Shoes</a></li>
-                              <li><a href="category.php">Kids & Babies</a></li>
-                              <li><a href="category.php">Watches</a></li>
-                              <li><a href="category.php">Jewellery</a></li>
-                              <li><a href="category.php">Edibles</a></li>
-                              <li><a href="category.php">Drinks</a></li>
-                              <li><a href="category.php">Food</a></li>
-                              <li><a href="category.php">Health & Beauty</a></li>
-                              <li><a href="category.php">Home & Furniture</a></li>
-                              <li><a href="category.php">Toys</a></li>
-                              <li><a href="category.php">Others</a></li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
+              <li class="dropdown active"> <a href="index.php" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">Home</a>
                 </li>
 
                 <li class="dropdown mega-menu"> 
@@ -213,73 +195,65 @@
                       <div class="yamm-content">
                         <div class="row">
                           <div class="col-xs-12 col-sm-12 col-md-2 col-menu">
-                            <h2 class="title">Laptops</h2>
+                            <h2 class="title">Computer</h2>
                             <ul class="links">
-                              <li><a href="#">Gaming</a></li>
-                              <li><a href="#">Laptop Skins</a></li>
-                              <li><a href="#">Apple</a></li>
-                              <li><a href="#">Dell</a></li>
-                              <li><a href="#">Lenovo</a></li>
-                              <li><a href="#">Microsoft</a></li>
-                              <li><a href="#">Asus</a></li>
-                              <li><a href="#">Adapters</a></li>
-                              <li><a href="#">Batteries</a></li>
-                              <li><a href="#">Cooling Pads</a></li>
+                              <li><a href="#">Keyboard</a></li>
+                              <li><a href="#">Mouse</a></li>
+                              <li><a href="#">External Storage</a></li>
+                              <li><a href="#">Networking</a></li>
+                              <li><a href="#">Tablets</a></li>
+                              <li><a href="#">Other Computer</a></li>
                             </ul>
                           </div>
                           <!-- /.col -->
-                          
+
                           <div class="col-xs-12 col-sm-12 col-md-2 col-menu">
-                            <h2 class="title">Desktops</h2>
-                            <ul class="links">
-                              <li><a href="#">Routers & Modems</a></li>
-                              <li><a href="#">CPUs, Processors</a></li>
-                              <li><a href="#">PC Gaming Store</a></li>
-                              <li><a href="#">Graphics Cards</a></li>
-                              <li><a href="#">Components</a></li>
-                              <li><a href="#">Webcam</a></li>
-                              <li><a href="#">Memory (RAM)</a></li>
-                              <li><a href="#">Motherboards</a></li>
-                              <li><a href="#">Keyboards</a></li>
-                              <li><a href="#">Headphones</a></li>
-                            </ul>
-                          </div>
-                          <!-- /.col -->
-                          
-                          <div class="col-xs-12 col-sm-12 col-md-2 col-menu">
-                            <h2 class="title">Cameras</h2>
-                            <ul class="links">
-                              <li><a href="#">Accessories</a></li>
-                              <li><a href="#">Binoculars</a></li>
-                              <li><a href="#">Telescopes</a></li>
-                              <li><a href="#">Camcorders</a></li>
-                              <li><a href="#">Digital</a></li>
-                              <li><a href="#">Film Cameras</a></li>
-                              <li><a href="#">Flashes</a></li>
-                              <li><a href="#">Lenses</a></li>
-                              <li><a href="#">Surveillance</a></li>
-                              <li><a href="#">Tripods</a></li>
-                            </ul>
-                          </div>
-                          <!-- /.col -->
-                          <div class="col-xs-12 col-sm-12 col-md-2 col-menu">
-                            <h2 class="title">Mobile Phones</h2>
-                            <ul class="links">
-                              <li><a href="#">Apple</a></li>
-                              <li><a href="#">Samsung</a></li>
-                              <li><a href="#">Lenovo</a></li>
-                              <li><a href="#">Motorola</a></li>
-                              <li><a href="#">LeEco</a></li>
-                              <li><a href="#">Asus</a></li>
-                              <li><a href="#">Acer</a></li>
-                              <li><a href="#">Accessories</a></li>
-                              <li><a href="#">Headphones</a></li>
-                              <li><a href="#">Memory Cards</a></li>
-                            </ul>
-                          </div>
-                          <div class="col-xs-12 col-sm-12 col-md-4 col-menu custom-banner"> <a href="#"><img alt="" src="assets/images/banners/banner-side.png"></a> </div>
+                          <h2 class="title">Phone&Accessories</h2>
+                          <ul class="links">
+                            <li><a href="#">Headphones&Earphone</a></li>
+                            <li><a href="#">Bluetooth headset</a></li>
+                            <li><a href="#">Bags&Cases</a></li>
+                            <li><a href="#">Holders&Stands</a></li>
+                            <li><a href="#">Memory Cards</a></li>
+                            <li><a href="#">Screen Protectors</a></li>
+                            <li><a href="#">Cables&Chargers</a></li>
+                            <li><a href="#">Mobile Phone</a></li>
+                          </ul>
                         </div>
+                        <!-- /.col -->
+                          
+                          <div class="col-xs-12 col-sm-12 col-md-2 col-menu">
+                            <h2 class="title">Smart Electronics</h2>
+                            <ul class="links">
+                              <li><a href="#">Smart Home</a></li>
+                              <li><a href="#">Wearable Devices</a></li>
+                            </ul>
+                          </div>
+                          <!-- /.col -->
+                          
+                          <div class="col-xs-12 col-sm-12 col-md-3 col-menu">
+                            <h2 class="title">Accessories&Parts</h2>
+                            <ul class="links">
+                              <li><a href="#">Selfie sticks</a></li>
+                              <li><a href="#">Digital Cables</a></li>
+                              <li><a href="#">Camera&Photo</a></li>
+                              <li><a href="#">Other Accessories</a></li>
+                            </ul>
+                          </div>
+                          <!-- /.col -->
+                          <div class="col-xs-12 col-sm-12 col-md-2 col-menu">
+                            <h2 class="title">Audio&Video</h2>
+                            <ul class="links">
+                              <li><a href="#">Home Audio&</a></li>
+                              <li><a href="#">Portable Audio&</a></li>
+                            </ul>
+                          </div>
+                          
                         <!-- /.row --> 
+
+                        
+
+
                       </div>
                       <!-- /.yamm-content --> </li>
                   </ul>
@@ -293,13 +267,19 @@
                           <div class="col-xs-12 col-sm-6 col-md-2 col-menu">
                             <h2 class="title">Men</h2>
                             <ul class="links">
-                              <li><a href="#">Dresses</a></li>
-                              <li><a href="#">Shoes </a></li>
-                              <li><a href="#">Jackets</a></li>
-                              <li><a href="#">Sunglasses</a></li>
-                              <li><a href="#">Sport Wear</a></li>
-                              <li><a href="#">Blazers</a></li>
-                              <li><a href="#">Shirts</a></li>
+                              <li><a href="#">Top&Tees</a></li>
+                              <li><a href="#">Shirts </a></li>
+                              <li><a href="#">Suits&Blazer</a></li>
+                              <li><a href="#">Pants</a></li>
+                              <li><a href="#">Jeans</a></li>
+                              <li><a href="#">Underwears</a></li>
+                              <li><a href="#">Hoodies&Sweatshirts</a></li>
+                              <li><a href="#">Coats&Jackets</a></li>
+                              <li><a href="#">Socks</a></li>
+                              <li><a href="#">Men's sets</a></li>
+                              <li><a href="#">Active Tracksuits</a></li>
+                              <li><a href="#">Sweaters</a></li>
+                              <li><a href="#">Swimwears</a></li>
                             </ul>
                           </div>
                           <!-- /.col -->
@@ -307,46 +287,77 @@
                           <div class="col-xs-12 col-sm-6 col-md-2 col-menu">
                             <h2 class="title">Women</h2>
                             <ul class="links">
-                              <li><a href="#">Handbags</a></li>
-                              <li><a href="#">Jwellery</a></li>
-                              <li><a href="#">Swimwear </a></li>
-                              <li><a href="#">Tops</a></li>
-                              <li><a href="#">Flats</a></li>
-                              <li><a href="#">Shoes</a></li>
-                              <li><a href="#">Winter Wear</a></li>
-                            </ul>
-                          </div>
-                          <!-- /.col -->
-                          
-                          <div class="col-xs-12 col-sm-6 col-md-2 col-menu">
-                            <h2 class="title">Boys</h2>
-                            <ul class="links">
-                              <li><a href="#">Toys & Games</a></li>
-                              <li><a href="#">Jeans</a></li>
-                              <li><a href="#">Shirts</a></li>
-                              <li><a href="#">Shoes</a></li>
-                              <li><a href="#">School Bags</a></li>
-                              <li><a href="#">Lunch Box</a></li>
-                              <li><a href="#">Footwear</a></li>
-                            </ul>
-                          </div>
-                          <!-- /.col -->
-                          
-                          <div class="col-xs-12 col-sm-6 col-md-2 col-menu">
-                            <h2 class="title">Girls</h2>
-                            <ul class="links">
-                              <li><a href="#">Sandals </a></li>
-                              <li><a href="#">Shorts</a></li>
                               <li><a href="#">Dresses</a></li>
-                              <li><a href="#">Jwellery</a></li>
-                              <li><a href="#">Bags</a></li>
-                              <li><a href="#">Night Dress</a></li>
-                              <li><a href="#">Swim Wear</a></li>
+                              <li><a href="#">Blouses&Shirts</a></li>
+                              <li><a href="#">Tops&Tees </a></li>
+                              <li><a href="#">Jumpsuits&Rompers</a></li>
+                              <li><a href="#">Intimates</a></li>
+                              <li><a href="#">Women's Sets</a></li>
+                              <li><a href="#">Pants&capris</a></li>
+                              <li><a href="#">Skirts</a></li>
+                              <li><a href="#">Swimwears</a></li>
+                              <li><a href="#">Coats&Jackets</a></li>
+                              <li><a href="#">Shorts</a></li>
+                              <li><a href="#">Socks&Hosiery</a></li>
+                              <li><a href="#">Women's Sleep&</a></li>
+                              <li><a href="#">Jeans</a></li>
+                              <li><a href="#">Hoodies&Sweatshirts</a></li>
+                              <li><a href="#">Active Tracksuits</a></li>
+                              <li><a href="#">Blazers&Suits</a></li>
+                              <li><a href="#">Leggings</a></li>
+                              <li><a href="#">Sweaters</a></li>
+                              <li><a href="#">Shapers&Bustiers</a></li>
                             </ul>
                           </div>
                           <!-- /.col -->
                           
-                          <div class="col-xs-12 col-sm-6 col-md-4 col-menu banner-image"> <img class="img-responsive" src="assets/images/banners/top-menu-banner.jpg" alt=""> </div>
+                          <div class="col-xs-12 col-sm-6 col-md-2 col-menu">
+                            <h2 class="title">World Apparel</h2>
+                            <ul class="links">
+                              <li><a href="#">Africa Clothing</a></li>
+                              <li><a href="#">Muslim Fashion</a></li>
+
+                            </ul>
+                          </div>
+                          <!-- /.col -->
+                          
+                          <div class="col-xs-12 col-sm-6 col-md-2 col-menu">
+                            <h2 class="title">Accessories</h2>
+                            <ul class="links">
+                              <li><a href="#">Sunglasses </a></li>
+                              <li><a href="#">Hats&Caps</a></li>
+                              <li><a href="#">Belts</a></li>
+                              <li><a href="#">Scarves&Wraps</a></li>
+                              <li><a href="#">Headwear</a></li>
+                              <li><a href="#">Gloves&Mittens</a></li>
+                              <li><a href="#">Ties</a></li>
+                              <li><a href="#">Other Accessories</a></li>
+                            </ul>
+                          </div>
+                          <!-- /.col -->
+
+                          <div class="col-xs-12 col-sm-6 col-md-2 col-menu">
+                            <h2 class="title">Sportswear</h2>
+                            <ul class="links">
+                              <li><a href="#">Jerseys </a></li>
+                              <li><a href="#">Clothing Sets</a></li>
+                              <li><a href="#">Pants</a></li>
+                              <li><a href="#">Other Sportswear</a></li>
+
+                            </ul>
+                          </div>
+                          <!-- /.col -->
+
+                          <div class="col-xs-12 col-sm-6 col-md-2 col-menu">
+                            <h2 class="title">Novelty&Special use</h2>
+                            <ul class="links">
+                              <li><a href="#">Exotic Apparel </a></li>
+
+                            </ul>
+                          </div>
+                          <!-- /.col -->
+                          
+                          
                           <!-- /.yamm-content --> 
                         </div>
                       </div>
@@ -362,13 +373,16 @@
                           <div class="col-xs-12 col-sm-6 col-md-2 col-menu">
                             <h2 class="title">Men</h2>
                             <ul class="links">
-                              <li><a href="#">Dresses</a></li>
-                              <li><a href="#">Shoes </a></li>
-                              <li><a href="#">Jackets</a></li>
-                              <li><a href="#">Sunglasses</a></li>
-                              <li><a href="#">Sport Wear</a></li>
-                              <li><a href="#">Blazers</a></li>
-                              <li><a href="#">Shirts</a></li>
+                              <li><a href="#">Sneakers</a></li>
+                              <li><a href="#">Business Shoes </a></li>
+                              <li><a href="#">Doug Shoes</a></li>
+                              <li><a href="#">Loafers</a></li>
+                              <li><a href="#">Canvas Shoes</a></li>
+                              <li><a href="#">Boots</a></li>
+                              <li><a href="#">Sandals&Flip Flop</a></li>
+                              <li><a href="#">Slippers</a></li>
+                              <li><a href="#">Other Men's</a></li>
+                                                            
                             </ul>
                           </div>
                           <!-- /.col -->
@@ -376,44 +390,30 @@
                           <div class="col-xs-12 col-sm-6 col-md-2 col-menu">
                             <h2 class="title">Women</h2>
                             <ul class="links">
-                              <li><a href="#">Handbags</a></li>
-                              <li><a href="#">Jwellery</a></li>
-                              <li><a href="#">Swimwear </a></li>
-                              <li><a href="#">Tops</a></li>
-                              <li><a href="#">Flats</a></li>
-                              <li><a href="#">Shoes</a></li>
-                              <li><a href="#">Winter Wear</a></li>
+                              <li><a href="#">Sandals&Flip Flop</a></li>
+                              <li><a href="#">Nude Shoes</a></li>
+                              <li><a href="#">Sneakers </a></li>
+                              <li><a href="#">Doug Shoes</a></li>
+                              <li><a href="#">Loafers</a></li>
+                              <li><a href="#">Canvas Shoes</a></li>
+                              <li><a href="#">Boots</a></li>
+                              <li><a href="#">Slippers</a></li>
+                              <li><a href="#">Other Women's</a></li>
+                              
                             </ul>
                           </div>
                           <!-- /.col -->
                           
                           <div class="col-xs-12 col-sm-6 col-md-2 col-menu">
-                            <h2 class="title">Boys</h2>
+                            <h2 class="title">Shoes Accessories</h2>
                             <ul class="links">
-                              <li><a href="#">Toys & Games</a></li>
-                              <li><a href="#">Jeans</a></li>
-                              <li><a href="#">Shirts</a></li>
-                              <li><a href="#">Shoes</a></li>
-                              <li><a href="#">School Bags</a></li>
-                              <li><a href="#">Lunch Box</a></li>
-                              <li><a href="#">Footwear</a></li>
+                              <li><a href="#">Insoles</a></li>
+                              <li><a href="#">Other Shoes Accessories</a></li>
+                              
                             </ul>
                           </div>
                           <!-- /.col -->
                           
-                          <div class="col-xs-12 col-sm-6 col-md-2 col-menu">
-                            <h2 class="title">Girls</h2>
-                            <ul class="links">
-                              <li><a href="#">Sandals </a></li>
-                              <li><a href="#">Shorts</a></li>
-                              <li><a href="#">Dresses</a></li>
-                              <li><a href="#">Jwellery</a></li>
-                              <li><a href="#">Bags</a></li>
-                              <li><a href="#">Night Dress</a></li>
-                              <li><a href="#">Swim Wear</a></li>
-                            </ul>
-                          </div>
-                          <!-- /.col -->
                           
                           <div class="col-xs-12 col-sm-6 col-md-4 col-menu banner-image"> <img class="img-responsive" src="assets/images/banners/top-menu-banner.jpg" alt=""> </div>
                           <!-- /.yamm-content --> 
@@ -429,131 +429,162 @@
                       <div class="yamm-content ">
                         <div class="row">
                           <div class="col-xs-12 col-sm-6 col-md-2 col-menu">
-                            <h2 class="title">Men</h2>
+                            <h2 class="title">Makeup</h2>
                             <ul class="links">
-                              <li><a href="#">Dresses</a></li>
-                              <li><a href="#">Shoes </a></li>
-                              <li><a href="#">Jackets</a></li>
-                              <li><a href="#">Sunglasses</a></li>
-                              <li><a href="#">Sport Wear</a></li>
-                              <li><a href="#">Blazers</a></li>
-                              <li><a href="#">Shirts</a></li>
+                              <li><a href="#">Eye Shadow</a></li>
+                              <li><a href="#">Powder </a></li>
+                              <li><a href="#">Eyes Makeup</a></li>
+                              <li><a href="#">Face Makeup</a></li>
+                              <li><a href="#">Lips Makeup</a></li>
+                              <li><a href="#">Makeup Sets</a></li>
+                              
                             </ul>
                           </div>
                           <!-- /.col -->
                           
                           <div class="col-xs-12 col-sm-6 col-md-2 col-menu">
-                            <h2 class="title">Women</h2>
+                            <h2 class="title">Skin Care</h2>
                             <ul class="links">
-                              <li><a href="#">Handbags</a></li>
-                              <li><a href="#">Jwellery</a></li>
-                              <li><a href="#">Swimwear </a></li>
-                              <li><a href="#">Tops</a></li>
-                              <li><a href="#">Flats</a></li>
-                              <li><a href="#">Shoes</a></li>
-                              <li><a href="#">Winter Wear</a></li>
+                              <li><a href="#">Masks</a></li>
+                              <li><a href="#">Serum</a></li>
+                              <li><a href="#">Cleanser </a></li>
+                              <li><a href="#">Face Creams</a></li>
+                              <li><a href="#">Body Cream</a></li>
+                              <li><a href="#">Sun&Sunless</a></li>
+                              
                             </ul>
                           </div>
                           <!-- /.col -->
                           
                           <div class="col-xs-12 col-sm-6 col-md-2 col-menu">
-                            <h2 class="title">Boys</h2>
+                            <h2 class="title">Health Care</h2>
                             <ul class="links">
-                              <li><a href="#">Toys & Games</a></li>
-                              <li><a href="#">Jeans</a></li>
-                              <li><a href="#">Shirts</a></li>
-                              <li><a href="#">Shoes</a></li>
-                              <li><a href="#">School Bags</a></li>
-                              <li><a href="#">Lunch Box</a></li>
-                              <li><a href="#">Footwear</a></li>
+                              <li><a href="#">Massage&Relaxation</a></li>
+                              <li><a href="#">Slimming Product</a></li>
+                              <li><a href="#">Health Monitors</a></li>
+                              <li><a href="#">Oral Hygiene</a></li>
+                              <li><a href="#">Other Health</a></li>
+                              
                             </ul>
                           </div>
                           <!-- /.col -->
                           
                           <div class="col-xs-12 col-sm-6 col-md-2 col-menu">
-                            <h2 class="title">Girls</h2>
+                            <h2 class="title">Tools</h2>
                             <ul class="links">
-                              <li><a href="#">Sandals </a></li>
-                              <li><a href="#">Shorts</a></li>
-                              <li><a href="#">Dresses</a></li>
-                              <li><a href="#">Jwellery</a></li>
-                              <li><a href="#">Bags</a></li>
-                              <li><a href="#">Night Dress</a></li>
-                              <li><a href="#">Swim Wear</a></li>
+                              <li><a href="#">Makeup Tools </a></li>
+                              <li><a href="#">Skin care Tools</a></li>
+                              <li><a href="#">Styling Tools</a></li>
+                              
                             </ul>
                           </div>
                           <!-- /.col -->
                           
-                          <div class="col-xs-12 col-sm-6 col-md-4 col-menu banner-image"> <img class="img-responsive" src="assets/images/banners/top-menu-banner.jpg" alt=""> </div>
-                          <!-- /.yamm-content --> 
+                          <div class="col-xs-12 col-sm-6 col-md-2 col-menu">
+                            <h2 class="title">More</h2>
+                            <ul class="links">
+                              <li><a href="#">Hair Care </a></li>
+                              <li><a href="#">Shaving&Hair</a></li>
+                              <li><a href="#">Nail Art</a></li>
+                              <li><a href="#">Tattoo&Body Art</a></li>
+                              <li><a href="#">Bath Shower</a></li>
+                              
+                            </ul>
+                          </div>
+                          <!-- /.col -->
                         </div>
                       </div>
                     </li>
                   </ul>
                 </li>
 
-                <li class="dropdown yamm mega-menu"> <a href="home.html" data-hover="dropdown" class="dropdown-toggle" data-toggle="dropdown">Home & Furniture</a>
+                <li class="dropdown yamm mega-menu"> <a href="home.html" data-hover="dropdown" class="dropdown-toggle" data-toggle="dropdown">Home & Appliances</a>
                   <ul class="dropdown-menu container">
                     <li>
                       <div class="yamm-content ">
                         <div class="row">
                           <div class="col-xs-12 col-sm-6 col-md-2 col-menu">
-                            <h2 class="title">Men</h2>
+                            <h2 class="title">Kitchen</h2>
                             <ul class="links">
-                              <li><a href="#">Dresses</a></li>
-                              <li><a href="#">Shoes </a></li>
-                              <li><a href="#">Jackets</a></li>
-                              <li><a href="#">Sunglasses</a></li>
-                              <li><a href="#">Sport Wear</a></li>
-                              <li><a href="#">Blazers</a></li>
-                              <li><a href="#">Shirts</a></li>
+                              <li><a href="#">Bakeware</a></li>
+                              <li><a href="#">Cooking Tools </a></li>
+                              <li><a href="#">Drinkware</a></li>
+                              
                             </ul>
                           </div>
                           <!-- /.col -->
                           
                           <div class="col-xs-12 col-sm-6 col-md-2 col-menu">
-                            <h2 class="title">Women</h2>
+                            <h2 class="title">Textile&Decor</h2>
                             <ul class="links">
-                              <li><a href="#">Handbags</a></li>
-                              <li><a href="#">Jwellery</a></li>
-                              <li><a href="#">Swimwear </a></li>
-                              <li><a href="#">Tops</a></li>
-                              <li><a href="#">Flats</a></li>
-                              <li><a href="#">Shoes</a></li>
-                              <li><a href="#">Winter Wear</a></li>
+                              <li><a href="#">Bedding Set</a></li>
+                              <li><a href="#">Curtain</a></li>
+                              <li><a href="#">Carpet </a></li>
+                              <li><a href="#">Pillow Case</a></li>
+                              <li><a href="#">Towel</a></li>
+                              <li><a href="#">Wall Sticker</a></li>
+                              <li><a href="#">Painting&Calligraphy</a></li>
+                              <li><a href="#">Clocks</a></li>
+                              <li><a href="#">Event&Part</a></li>
+                              
                             </ul>
                           </div>
                           <!-- /.col -->
                           
                           <div class="col-xs-12 col-sm-6 col-md-2 col-menu">
-                            <h2 class="title">Boys</h2>
+                            <h2 class="title">Lighting</h2>
                             <ul class="links">
-                              <li><a href="#">Toys & Games</a></li>
-                              <li><a href="#">Jeans</a></li>
-                              <li><a href="#">Shirts</a></li>
-                              <li><a href="#">Shoes</a></li>
-                              <li><a href="#">School Bags</a></li>
-                              <li><a href="#">Lunch Box</a></li>
-                              <li><a href="#">Footwear</a></li>
+                              <li><a href="#">Decoration Lighting</a></li>
+                              <li><a href="#">Lamps</a></li>
+                              <li><a href="#">Portable Lighting</a></li>
+                              
                             </ul>
                           </div>
                           <!-- /.col -->
                           
                           <div class="col-xs-12 col-sm-6 col-md-2 col-menu">
-                            <h2 class="title">Girls</h2>
+                            <h2 class="title">Sewing</h2>
                             <ul class="links">
-                              <li><a href="#">Sandals </a></li>
-                              <li><a href="#">Shorts</a></li>
-                              <li><a href="#">Dresses</a></li>
-                              <li><a href="#">Jwellery</a></li>
-                              <li><a href="#">Bags</a></li>
-                              <li><a href="#">Night Dress</a></li>
-                              <li><a href="#">Swim Wear</a></li>
+                              <li><a href="#">Sewing&Fabric </a></li>
+                              <li><a href="#">Needle Arts&</a></li>
+                              
                             </ul>
                           </div>
                           <!-- /.col -->
                           
-                          <div class="col-xs-12 col-sm-6 col-md-4 col-menu banner-image"> <img class="img-responsive" src="assets/images/banners/top-menu-banner.jpg" alt=""> </div>
+                          <div class="col-xs-12 col-sm-6 col-md-2 col-menu">
+                            <h2 class="title">Storage</h2>
+                            <ul class="links">
+                              <li><a href="#">Bags </a></li>
+                              <li><a href="#">Holders&Racks</a></li>
+                              <li><a href="#">Boxes&Bins</a></li>
+                            </ul>
+                          </div>
+                          <!-- /.col -->
+
+                          <div class="col-xs-12 col-sm-6 col-md-2 col-menu">
+                            <h2 class="title">More</h2>
+                            <ul class="links">
+                              <li><a href="#">Cleaning Tools </a></li>
+                              <li><a href="#">Bathrroom</a></li>
+                              
+                            </ul>
+                          </div>
+                          <!-- /.col -->
+
+                          <div class="col-xs-12 col-sm-6 col-md-2 col-menu">
+                            <h2 class="title">Appliances</h2>
+                            <ul class="links">
+                              <li><a href="#">Kitchen </a></li>
+                              <li><a href="#">Air Codition</a></li>
+                              <li><a href="#">Personal Care</a></li>
+                              <li><a href="#">Coffee Makers</a></li>
+                              <li><a href="#">Laundry Appliance</a></li>
+                            </ul>
+                          </div>
+                          <!-- /.col -->
+
+
                           <!-- /.yamm-content --> 
                         </div>
                       </div>
@@ -561,49 +592,257 @@
                   </ul>
                 </li>
 
-                <li class="dropdown yamm mega-menu"> <a href="home.html" data-hover="dropdown" class="dropdown-toggle" data-toggle="dropdown">Accessories</a>
+                <li class="dropdown yamm mega-menu"> <a href="home.html" data-hover="dropdown" class="dropdown-toggle" data-toggle="dropdown">Kids&Toys</a>
                   <ul class="dropdown-menu container">
                     <li>
                       <div class="yamm-content">
                         <div class="row">
-                          <div class="col-xs-7 col-sm-4 col-md-4 col-menu">
-                            <h2 class="title">Men</h2>
+                          <div class="col-xs-12 col-sm-6 col-md-2 col-menu">
+                            <h2 class="title">Kid's Wear</h2>
                             <ul class="links">
                               <li><a href="#">Dresses</a></li>
-                              <li><a href="#">Shoes </a></li>
-                              <li><a href="#">Jackets</a></li>
-                              <li><a href="#">Sunglasses</a></li>
-                              <li><a href="#">Sport Wear</a></li>
-                              <li><a href="#">Blazers</a></li>
-                              <li><a href="#">Shirts</a></li>
-                            </ul>
-                          </div>
-                          <!-- /.col -->
-                          
-                          <div class="col-xs-7 col-sm-4 col-md-4 col-menu">
-                            <h2 class="title">Women</h2>
-                            <ul class="links">
-                              <li><a href="#">Handbags</a></li>
-                              <li><a href="#">Jwellery</a></li>
-                              <li><a href="#">Swimwear </a></li>
+                              <li><a href="#">Sets </a></li>
                               <li><a href="#">Tops</a></li>
-                              <li><a href="#">Flats</a></li>
-                              <li><a href="#">Shoes</a></li>
-                              <li><a href="#">Winter Wear</a></li>
+                              <li><a href="#">Bottoms</a></li>
+                              <li><a href="#">Socks&Leggings</a></li>
+                              <li><a href="#">Other Kid's Wear</a></li>
+                              
+                            </ul>
+                          </div>
+                          <!-- /.col -->
+                          
+                          <div class="col-xs-12 col-sm-6 col-md-2 col-menu">
+                            <h2 class="title">Kid's Shoes</h2>
+                            <ul class="links">
+                              <li><a href="#">Sneakers</a></li>
+                              <li><a href="#">Leather Shoes</a></li>
+                              <li><a href="#">Sandals </a></li>
+                              <li><a href="#">Loafers</a></li>
+                              <li><a href="#">Boots</a></li>
+                              <li><a href="#">Other Kid's Shoes</a></li>
+                              
+                            </ul>
+                          </div>
+                          <!-- /.col -->
+
+                          <div class="col-xs-12 col-sm-6 col-md-2 col-menu">
+                            <h2 class="title">Baby Fashion</h2>
+                            <ul class="links">
+                              <li><a href="#">Baby's Sets</a></li>
+                              <li><a href="#">Bodysuits&One</a></li>
+                              <li><a href="#">Dresses </a></li>
+                              <li><a href="#">Accessories</a></li>
+                              <li><a href="#">Baby Shoes</a></li>
+                              <li><a href="#">Other Baby Clothing</a></li>
+                              
+                            </ul>
+                          </div>
+                          <!-- /.col -->
+
+                          <div class="col-xs-12 col-sm-6 col-md-2 col-menu">
+                            <h2 class="title">Baby & Moms</h2>
+                            <ul class="links">
+                              <li><a href="#">Kid's Bags</a></li>
+                              <li><a href="#">Baby Care</a></li>
+                              <li><a href="#">Activity&Gear </a></li>
+                              <li><a href="#">Feeding</a></li>
+                              <li><a href="#">Safety</a></li>
+                              <li><a href="#">Bedding</a></li>
+                              <li><a href="#">Maternity</a></li>
                             </ul>
                           </div>
                           <!-- /.col -->
                           
                           
                           
-                          <div class="col-xs-12 col-sm-6 col-md-4 col-menu banner-image"> <img class="img-responsive" src="assets/images/banners/top-menu-banner.jpg" alt=""> </div>
+                          <div class="col-xs-12 col-sm-6 col-md-2 col-menu">
+                            <h2 class="title">Toys</h2>
+                            <ul class="links">
+                              <li><a href="#">Learning</a></li>
+                              <li><a href="#">Classic Toys</a></li>
+                              <li><a href="#">Models&Building </a></li>
+                              <li><a href="#">Dolls</a></li>
+                              <li><a href="#">Puzzles&Magic</a></li>
+                              <li><a href="#">Outdoor Play</a></li>
+                              <li><a href="#">Remote Control</a></li>
+                              <li><a href="#">Baby Toys</a></li>
+                              <li><a href="#">Other Toys</a></li>
+                              
+                            </ul>
+                          </div>
+                          <!-- /.col -->
+
                           <!-- /.yamm-content --> 
                         </div>
                       </div>
                     </li>
                   </ul>
                 </li>
-                <li class="dropdown"> <a href="contact.html">Others</a> </li>
+
+                <li class="dropdown yamm mega-menu"> <a href="home.html" data-hover="dropdown" class="dropdown-toggle" data-toggle="dropdown">Other</a>
+                  <ul class="dropdown-menu container">
+                    <li>
+                      <div class="yamm-content">
+                        <div class="row">
+                          <div class="col-xs-12 col-sm-6 col-md-2 col-menu">
+                            <h2 class="title">Watches&Jewelry</h2>
+                            <ul class="links">
+                              <li><a href="#">Women's Quertz Watches</a></li>
+                              <li><a href="#">Women's Digital Watches </a></li>
+                              <li><a href="#">Women's Mechanical Watches</a></li>
+                              <li><a href="#">Women's Dual Display</a></li>
+                              <li><a href="#">Women's Earings</a></li>
+                              <li><a href="#">Women's Necklaces</a></li>
+                              <li><a href="#">Women's Rings</a></li>
+                              <li><a href="#">Women's Jewelry Sets </a></li>
+                              <li><a href="#">Women's Bracelets</a></li>
+                              <li><a href="#">Women's Anklets</a></li><hr>
+
+                              <li><a href="#">Men's Quertz Watches</a></li>
+                              <li><a href="#">Men's Digital Watches </a></li>
+                              <li><a href="#">Men's Mechanical Watches</a></li>
+                              <li><a href="#">Men's Dual Display</a></li>
+                              <li><a href="#">Men's Ringss</a></li>
+                              <li><a href="#">Men's Necklaces</a></li>
+                              <li><a href="#">Men's Bracelets</a></li>
+                              <li><a href="#">Men's Earings </a></li>
+                              <li><a href="#">Men's Mechanical Watches</a></li><hr> 
+
+                              <li><a href="#">Children's Watches</a></li>
+                              <li><a href="#">Pocket&Fob</a></li>
+                              <li><a href="#">Watche Accessories</a></li><hr>
+
+                              <li><a href="#">Hair Jewelry</a></li>
+                              <li><a href="#">Brooches </a></li>
+                              <li><a href="#">Tie Clips&Cufflinks</a></li>
+                              <li><a href="#">Key Chain</a></li>
+                              
+                              
+                            </ul>
+                          </div>
+                          <!-- /.col -->
+                          
+                          <div class="col-xs-12 col-sm-6 col-md-2 col-menu">
+                            <h2 class="title">Wedding</h2>
+                            <ul class="links">
+                              <li><a href="#">Mermaid Wedding</a></li>
+                              <li><a href="#">Tail Wedding</a></li>
+                              <li><a href="#">Bubble Hem </a></li>
+                              <li><a href="#">Other Wedding</a></li><hr>
+
+                              <li><a href="#">Suits&Blazer</a></li>
+                              <li><a href="#">Women Gown</a></li>
+                              <li><a href="#">Flower Girl Dresses </a></li><hr>
+                              
+                              <li><a href="#">Wedding Bouquet</a></li>
+                              <li><a href="#">Petticoats</a></li>
+                              <li><a href="#">Bridal Veils </a></li>
+                              <li><a href="#">Bridal Hairpins </a></li>
+                              <li><a href="#">Ties </a></li>
+                              <li><a href="#">Bridal Gloves </a></li>
+                              <li><a href="#">Bridal Hats </a></li>
+                              <li><a href="#">Other Accessories</a></li>
+                              
+                              
+                            </ul>
+                          </div>
+                          <!-- /.col -->
+
+                          <div class="col-xs-12 col-sm-6 col-md-2 col-menu">
+                            <h2 class="title">Hair</h2>
+                            <ul class="links">
+                              <li><a href="#">Wigs</a></li>
+                              <li><a href="#">Hair Extension</a></li>
+                              <li><a href="#">Lace Closure </a></li>
+                              <li><a href="#">Lace Frontal</a></li>
+                              <li><a href="#">Hair Weft&Closure</a></li><hr>
+
+                              <li><a href="#">Blended Hair</a></li>
+                              <li><a href="#">Accessories&Tools</a></li>
+                              
+                              
+                            </ul>
+                          </div>
+                          <!-- /.col -->
+
+                          <div class="col-xs-12 col-sm-6 col-md-2 col-menu">
+                            <h2 class="title">Automobile Accessory&Tools</h2>
+                            <ul class="links">
+                              <li><a href="#">Car Electrical</a></li>
+                              <li><a href="#">Car Player</a></li>
+                              <li><a href="#">Rear View Camera </a></li>
+                              <li><a href="#">GPS Receiver&</a></li><hr>
+
+                              <li><a href="#">Interior Accessories</a></li>
+                              <li><a href="#">Exterior Accessories</a></li><hr>
+
+                              <li><a href="#">Lighting</a></li>
+                              <li><a href="#">Protective Gears</a></li>
+                              <li><a href="#">Frames&Fittings</a></li>
+                              <li><a href="#">Accessories</a></li><hr>
+
+                              <li><a href="#">Tire Repair</a></li>
+                              <li><a href="#">Code Readers</a></li>
+                              <li><a href="#">Diagnotic Tool</a></li>
+                              <li><a href="#">Car Wash</a></li>
+                              <li><a href="#">Sponges,Cloths</a></li><hr>
+
+                              <li><a href="#">Roadway Safety</a></li>
+                              <li><a href="#">Other</a></li><hr>
+
+                              <li><a href="#">Hand Tool</a></li>
+                              <li><a href="#">Measurement</a></li>
+                              <li><a href="#">Other Tools</a></li><hr>
+
+                              <li><a href="#">Video Survielance</a></li>
+                              <li><a href="#">Other Safety</a></li>
+                              
+                            </ul>
+                          </div>
+                          <!-- /.col -->
+                          
+                          
+                          
+                          <div class="col-xs-12 col-sm-6 col-md-2 col-menu">
+                            <h2 class="title">Sports&Entertainment</h2>
+                            <ul class="links">
+                              <li><a href="#">Yoga</a></li>
+                              <li><a href="#">Fitness Equipment</a></li>
+                              <li><a href="#">Other Fitness </a></li><hr>
+
+                              <li><a href="#">Travel Supplies</a></li>
+                              <li><a href="#">Camping Equipment</a></li><hr>
+
+                              <li><a href="#">Bicycle Parts</a></li>
+                              <li><a href="#">Cycling Accessories</a></li><hr>
+
+                              <li><a href="#">Water Sports</a></li>
+                              <li><a href="#">Sport Bag</a></li>
+                              <li><a href="#">Musical Instruments</a></li>
+                              <li><a href="#">Fishing Gear</a></li>
+                              <li><a href="#">Ball Gear</a></li>
+                                                           
+                              
+                            </ul>
+                          </div>
+                          <!-- /.col -->
+
+                          <div class="col-xs-12 col-sm-6 col-md-2 col-menu">
+                            <h2 class="title">Adult Toys</h2>
+                            <ul class="links">
+                              <li><a href="#">Female Sex Toys</a></li>
+                              <li><a href="#">Male Sex Toys</a></li>
+                                                  
+                            </ul>
+                          </div>
+                          <!-- /.col -->
+
+                          <!-- /.yamm-content --> 
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
 
                 
                 <li class="dropdown  navbar-right special-menu"> <a href="#">Todays offer</a> </li>
