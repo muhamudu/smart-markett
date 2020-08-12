@@ -1,4 +1,3 @@
-<!-- Login Form -->
 <?php
 include("../../database/connection.php");
 if (isset($_POST['issubmit'])) {
@@ -24,5 +23,4 @@ if (isset($_POST['issubmit'])) {
     
 }
     
-
 ?>

@@ -1,6 +1,7 @@
 $(document).ready(function () {
     $(".form").submit(function (e) { 
         e.preventDefault();
+        alert('well');
         var form=$(this).serialize();
         var action=$(this).attr("action");
         var method=$(this).attr("method");
@@ -11,12 +12,12 @@ $(document).ready(function () {
             data: form,
             cache: false,
             processData: false,
-            beforeSubmit:function (){
-                
-            },
             success: function (response) {
                 if(response=='access'){
                     location.href=redirectTo+'.php';
+                }
+                else{
+                    alert(response);
                 }
             }
         });
