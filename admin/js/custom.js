@@ -1,7 +1,6 @@
 $(document).ready(function () {
     $(".form").submit(function (e) { 
         e.preventDefault();
-        alert('well');
         var form=$(this).serialize();
         var action=$(this).attr("action");
         var method=$(this).attr("method");
