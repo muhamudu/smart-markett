@@ -45,15 +45,10 @@
 					</li>
 
 					<li class="sidebar-header">
-						Users & Setting
+						Setting
 					</li>
 					
 
-					<li class="sidebar-item">
-						<a class="sidebar-link" href="up-user.php">
-              <i class="align-middle" data-feather="users"></i> <span class="align-middle">Users</span>
-            </a>
-                    </li>
                     
 
 					<li class="sidebar-item">

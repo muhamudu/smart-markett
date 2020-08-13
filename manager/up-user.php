@@ -20,6 +20,12 @@
             </a>
 					</li>
 
+                    <li class="sidebar-item">
+						<a class="sidebar-link" href="category.php">
+						<i class="align-middle" data-feather="list"></i> <span class="align-middle">Category</span>
+						</a>
+					</li>
+
 					<li class="sidebar-item">
 						<a class="sidebar-link" href="pages-product.php">
               <i class="align-middle" data-feather="briefcase"></i> <span class="align-middle">Products</span>
