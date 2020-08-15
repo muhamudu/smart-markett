@@ -14,7 +14,7 @@
               <li class="media">
                 <div class="pull-left"> <span class="icon fa-stack fa-lg"> <i class="fa fa-map-marker fa-stack-1x fa-inverse"></i> </span> </div>
                 <div class="media-body">
-                  <p>Rwanda - Kigali City - Kicukiro - KK 4 Ave St</p>
+                  <p>Rwanda-Gasabo,Telecom House,8 KG 7 Ave, Kigali</p>
                 </div>
               </li>
               <li class="media">

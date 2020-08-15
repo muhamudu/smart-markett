@@ -58,13 +58,7 @@
                 <li><a href="#">Kiswahili</a></li>
               </ul>
             </li>
-            <li class="dropdown dropdown-small"> <a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown"><span class="value"><i class="icon fa fa-user"></i>  My Account </span><b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Login</a></li>
-                <li><a href="#">Create New Accoun</a></li>
-                
-              </ul>
-            </li>
+            
           </ul>
           <!-- /.list-unstyled --> 
         </div>
@@ -74,7 +68,11 @@
           <ul class="list-unstyled">
             <li><a href="#"><i class="icon fa fa-phone"></i>+250 780 206 281</a></li>
             <li><a href="mail:smartmarket@gmail.com"><i class="icon fa fa-envelope"></i>smartmarket@gmail.com</a></li>
-            <li><a href="#"><i class="icon fa fa-heart"></i>Wishlist</a></li>
+            <li><a href="wishlist.php"><i class="icon fa fa-heart"></i>Wishlist</a></li>
+            <li><a href="contact.php"><i class="icon fa fa-phone"></i>Contact Us</a></li>
+            <li><a href="account.php"><i class="icon fa fa-user"></i>My Account</a></li>
+            <li><a href="blog.php"><i class="icon fa fa-globe"></i>Blog</a></li>
+            <li><a href="faq.php"><i class="icon fa fa-info"></i>FAQ</a></li>
             <li><a href="#"></a></li>
           </ul>
         </div>
@@ -153,7 +151,7 @@
                 <div class="clearfix cart-total">
                   <div class="pull-right"> <span class="text">Sub Total :</span><span class='price'>$600.00</span> </div>
                   <div class="clearfix"></div>
-                  <a href="checkout.php" class="btn btn-upper btn-primary btn-block m-t-20">Checkout</a> </div>
+                  <a href="shopping-cart.php" class="btn btn-upper btn-primary btn-block m-t-20">Shoping Cart</a> </div>
                 <!-- /.cart-total--> 
                 
               </li>
@@ -189,7 +187,7 @@
                 </li>
 
                 <li class="dropdown mega-menu"> 
-                <a href="category.html"  data-hover="dropdown" class="dropdown-toggle" data-toggle="dropdown">Electronics <span class="menu-label hot-menu hidden-xs">hot</span> </a>
+                <a href="category.html"  data-hover="dropdown" class="dropdown-toggle" data-toggle="dropdown">Electronics <span class="menu-label new-menu hidden-xs">New</span> </a>
                   <ul class="dropdown-menu container">
                     <li>
                       <div class="yamm-content">

@@ -108,49 +108,34 @@
 									<h5 class="card-title mb-0">Profile Details</h5>
 								</div>
 								<div class="card-body text-center">
-									<img src="img/avatars/avatar.jpg" alt="Christina Mason" class="img-fluid rounded-circle mb-2" width="128" height="128" />
-									<h5 class="card-title mb-0">NDAYISHIMIYE Muhamudu</h5>
-									<div class="text-muted mb-2">CEO & Web Developer</div>
+									<img src="../images/profile-img/<?php echo $row['user_img']; ?>" alt="Christina Mason" class="img-fluid rounded-circle mb-2" width="128" height="128" />
+									<h5 class="card-title mb-0"><?php echo "".$row['firstname']." ".$row['lastname'].""; ?></h5>
+									<div class="text-muted mb-2"><?php echo $row['position']; ?></div>
  
 									<div>
-										<a class="btn btn-primary btn-sm" href="#">Edit</a>
-										<a class="btn btn-primary btn-sm" href="#"><span data-feather="message-square"></span> Message</a>
+										<a class="btn btn-primary btn-sm" href="up-setting.php">Update Profile</a>
+										
 									</div>
 								</div>
 								<hr class="my-0" />
-								<div class="card-body">
-									<h5 class="h6 card-title">Skills</h5>
-									<a href="#" class="badge badge-primary mr-1 my-1">HTML</a>
-									<a href="#" class="badge badge-primary mr-1 my-1">JavaScript</a>
-									<a href="#" class="badge badge-primary mr-1 my-1">Sass</a>
-									<a href="#" class="badge badge-primary mr-1 my-1">Angular</a>
-									<a href="#" class="badge badge-primary mr-1 my-1">Vue</a>
-									<a href="#" class="badge badge-primary mr-1 my-1">React</a>
-									<a href="#" class="badge badge-primary mr-1 my-1">Redux</a>
-									<a href="#" class="badge badge-primary mr-1 my-1">UI</a>
-									<a href="#" class="badge badge-primary mr-1 my-1">UX</a>
-								</div>
-								<hr class="my-0" />
+								
 								<div class="card-body">
 									<h5 class="h6 card-title">About</h5>
 									<ul class="list-unstyled mb-0">
-										<li class="mb-1"><span data-feather="home" class="feather-sm mr-1"></span> Lives in <a href="#">Kigali City, Rwanda</a></li>
+										<li class="mb-1"><span data-feather="phone" class="feather-sm mr-1"></span> Phone: <a href="#"><?php echo "".$row['phone'].""; ?></a></li>
 
-										<li class="mb-1"><span data-feather="briefcase" class="feather-sm mr-1"></span> Works at <a href="#">Smart-Market</a></li>
-										<li class="mb-1"><span data-feather="map-pin" class="feather-sm mr-1"></span> From <a href="#">Kigali</a></li>
+										<li class="mb-1"><span data-feather="home" class="feather-sm mr-1"></span> Lives in <a href="#"><?php echo "".$row['address']."-".$row['city']."-".$row['state'].""; ?></a></li>
+										<?php 
+											$selData = mysqli_query($DB_CONNECT,"SELECT * FROM company_tb WHERE user_ID='".$row['user_ID']."' ");
+
+											$fetData = mysqli_fetch_array($selData);
+										?>
+
+										<li class="mb-1"><span data-feather="briefcase" class="feather-sm mr-1"></span> Works at <a href="#"><?php echo $fetData['company_name']; ?></a></li>
+										<li class="mb-1"><span data-feather="map-pin" class="feather-sm mr-1"></span><a href="#"><?php echo $fetData['address']; ?></a></li>
 									</ul>
 								</div>
-								<hr class="my-0" />
-								<div class="card-body">
-									<h5 class="h6 card-title">Elsewhere</h5>
-									<ul class="list-unstyled mb-0">
-										<li class="mb-1"><span class="fas fa-globe fa-fw mr-1"></span> <a href="#">staciehall.co</a></li>
-										<li class="mb-1"><span class="fab fa-twitter fa-fw mr-1"></span> <a href="#">Twitter</a></li>
-										<li class="mb-1"><span class="fab fa-facebook fa-fw mr-1"></span> <a href="#">Facebook</a></li>
-										<li class="mb-1"><span class="fab fa-instagram fa-fw mr-1"></span> <a href="#">Instagram</a></li>
-										<li class="mb-1"><span class="fab fa-linkedin fa-fw mr-1"></span> <a href="#">LinkedIn</a></li>
-									</ul>
-								</div>
+								
 							</div>
 						</div>
 

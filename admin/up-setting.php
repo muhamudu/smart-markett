@@ -125,11 +125,12 @@
 								<div class="list-group list-group-flush" role="tablist">
 
                                     <a class="list-group-item list-group-item-action active" data-toggle="list" href="#account" role="tab">Account</a>
+
+									<a class="list-group-item list-group-item-action" data-toggle="list" href="#company" role="tab">Company</a>
                                     
                                     <a class="list-group-item list-group-item-action" data-toggle="list" href="#password" role="tab">Password</a>
                                     
-                                    <a class="list-group-item list-group-item-action" data-toggle="list" href="#company" role="tab">Company</a>
-                                    
+                                                                        
 								</div>
 							</div>
 						</div>
@@ -388,24 +389,92 @@
                                 <div class="tab-pane fade" id="company" role="tabpanel">
 									<div class="card">
 										<div class="card-body">
-											<h5 class="card-title">Company Details</h5>
+											<h5 class="card-title"><strong>Company Details</strong></h5>
+											<?php
+												$user_ID = $row['user_ID'];
+												$getData = mysqli_query($DB_CONNECT,"SELECT * FROM company_tb WHERE user_ID='$user_ID' ");
+												
+												$fetData = mysqli_fetch_array($getData);
+												$companyID = $fetData['company_ID'];
 
-											<form>
-												<div class="form-group">
-													<label for="inputPasswordCurrent">Current password</label>
-													<input type="password" class="form-control" id="inputPasswordCurrent">
-													<small><a href="#">Forgot your password?</a></small>
-												</div>
-												<div class="form-group">
-													<label for="inputPasswordNew">New password</label>
-													<input type="password" class="form-control" id="inputPasswordNew">
-												</div>
-												<div class="form-group">
-													<label for="inputPasswordNew2">Verify password</label>
-													<input type="password" class="form-control" id="inputPasswordNew2">
-												</div>
-												<button type="submit" class="btn btn-primary">Save changes</button>
-											</form>
+
+												if (isset($_POST['update_company_details'])) {
+                                                    $update_company_name = $_POST['update_company_name'];
+                                                    $update_category = $_POST['update_category'];
+                                                    $update_phone = $_POST['update_phone'];
+                                                    $update_address = $_POST['update_address'];
+                                                    $update_logo = $_FILES['update_logo']['name'];
+                                                    $update_location = '../images/logos/'.basename($_FILES['update_logo']['name']);
+                                                    
+                                                    $sqlUpdate = mysqli_query($DB_CONNECT,"UPDATE `company_tb` SET `company_name`='$update_company_name',`category`='$update_category',`phone_number`='$update_phone',`address`='$update_address',`logo`='$update_logo' WHERE company_ID='$companyID' ");
+
+                                                    if(move_uploaded_file($_FILES['update_logo']['tmp_name'], $update_location)){
+                                                        if ($sqlUpdate) {
+                                                            echo "<meta http-equiv='refresh' content='0'>";
+                                                        }
+                                                        else {
+                                                            echo "Data not saved into the Database";
+                                                        }
+                                                                                                                
+                                                    }
+                                                    else {
+                                                        echo "Failed to upload image!!".mysqli_error($DB_CONNECT);
+                                                    }
+                                                    
+                                                }
+											?>
+											<form action="" method="post" enctype="multipart/form-data">
+                                                <div class="row">
+                                                    <div class="col-md-8">
+                                                        
+                                                        <div class="form-group">
+                                                            <label>Company Name</label>
+                                                            <input type="text" class="form-control" value="<?php echo $fetData['company_name']; ?>" name="update_company_name">
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <label>Category</label>
+                                                            <select name="update_category" class="form-control">
+                                                                <option value="<?php echo $fetData['category']; ?>"  selected><?php echo $fetData['category']; ?></option>
+																<option disabled></option>
+                                                                <option>Private</option>
+                                                                <option>Public</option>
+                                                                <option>Co-operative</option>
+                                                            </select>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <label>Business Phone Number</label>
+                                                            <input type="text" name="update_phone" class="form-control"  value="<?php echo $fetData['phone_number']; ?>">
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <label>Address</label>
+                                                            <input type="text" name="update_address" class="form-control" value="<?php echo $fetData['address']; ?>">
+                                                        </div>
+                                                        
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="text-center">
+                                                            <div class="form-group">
+                                                                <label><strong>Company's Logo</strong></label>
+                                                                <div class="fileupload fileupload-new" data-provides="fileupload">
+                                                                    <div class="fileupload-new thumbnail" style="width: 60%; height: 120px;"><img src="../images/logos/<?php echo $fetData['logo']; ?>" alt="" /></div>
+                                                                    <div class="fileupload-preview fileupload-exists thumbnail" style="width: 60%; height: 120px;"></div>
+                                                                    <div>
+                                                                        <span class="btn btn-file btn-primary"><span class="fileupload-new">Select logo</span><span class="fileupload-exists">Change</span><input type="file" value="<?php echo $fetData['logo']; ?>" name="update_logo" /></span>
+
+                                                                        <!-- <button type="submit" class="btn btn-success fileupload-exists">Save</button> -->
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <small>For best results, use an image at least 128px by 128px in .jpg format</small>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <button type="submit" name="update_company_details" class="btn btn-primary">Save changes</button>
+                                            </form>
 
 										</div>
 									</div>

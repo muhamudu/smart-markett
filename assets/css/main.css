@@ -143,7 +143,7 @@ img[src="assets/images/blank.gif"] {
   -ms-transition: all linear 0.2s;
   -o-transition: all linear 0.2s;
   transition: all linear 0.2s;
-  background: #0cabc7;
+  background: #108bea;
   color: #fff;
   border: none;
   font-size: 13px;
@@ -1191,7 +1191,7 @@ a {
 /*===================================================================================*/
 /* Header
 /*===================================================================================*/
-header{background:#0a8ca3}
+header{background:#157ed2}
 
 .main-header {
   padding:5px 0px 12px 0px;
@@ -1304,8 +1304,8 @@ header{background:#0a8ca3}
 
 .top-cart-row .dropdown-cart .lnk-cart {
   padding: 0px;
-      background: #0cabc7;
-    border: 1px solid #0a98b1;
+      background: #006cb4;
+    border: 1px solid #24609c;
   border-radius: 3px;
   display: inline-block;
   color: #fff;
@@ -2613,7 +2613,7 @@ age-container #owl-main .owl-next {
 }
 
 .info-boxes-inner {
-  background-color: #0cabc7;
+  background-color: #0f6cb2;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,.08);
 }
   
@@ -2761,7 +2761,7 @@ age-container #owl-main .owl-next {
 }
 .product .cart .action ul li.lnk {
   margin: 10px 0px;
-      background: #0cabc7;
+      background: #0f6cb2;
     margin: 0px;
     padding: 8px 2px;
 	border-left:1px solid hsla(0,0%,100%,.2);
@@ -2773,7 +2773,7 @@ age-container #owl-main .owl-next {
   padding: 8px 10px;
 }
 .product .cart .action ul li.lnk.wishlist {
-	background:#0cabc7;
+	background:#0f6cb2;
 	margin:0px;
 	border-radius:0px
 	

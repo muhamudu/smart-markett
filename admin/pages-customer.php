@@ -120,12 +120,7 @@
                     <div class="row">
 						<div class="col-12">
 							<div class="card">
-								<div class="card-header">
-                                    <button type="button" class="btn btn-square btn-success" data-toggle="modal" data-target="#centeredModalPrimary">
-                                        <i class="align-middle" data-feather="plus"></i> <span class="align-middle">Add Product</span>
-                                    </button>
-                                </div>
-
+								
                                 <!-- BEGIN Add Product Modal -->
                                 <div class="modal fade" id="centeredModalPrimary" tabindex="-1" role="dialog" aria-hidden="true">
                                     <div class="modal-dialog modal-dialog-centered" role="document">
