@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 06, 2020 at 02:52 PM
+-- Generation Time: Aug 15, 2020 at 10:33 PM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 5.6.31
 
@@ -62,12 +62,48 @@ CREATE TABLE `category_tb` (
 --
 
 INSERT INTO `category_tb` (`category_ID`, `category_name`, `status`) VALUES
-(1, 'Home', 'Active'),
-(2, 'Men', 'Active'),
-(3, 'Women', 'Active'),
-(4, 'Food', 'Active'),
-(5, 'Electronics', 'Active'),
-(6, 'Bags', 'Active');
+(1, 'Computer', 'Active'),
+(2, 'Phone&Accessories', 'Active'),
+(4, 'Smart Electronic', 'Active'),
+(5, 'Accessories&Parts', 'Active'),
+(6, 'Audio&Video', 'Active');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `client_order_tb`
+--
+
+CREATE TABLE `client_order_tb` (
+  `order_ID` int(11) NOT NULL,
+  `order_ref` int(11) NOT NULL,
+  `client_ID` int(11) NOT NULL,
+  `product_ID` int(11) NOT NULL,
+  `client_address_ID` int(11) NOT NULL,
+  `quantity` int(11) NOT NULL,
+  `payment_method` varchar(100) NOT NULL,
+  `unity_price` int(20) NOT NULL,
+  `total_price` int(20) NOT NULL,
+  `status` varchar(30) NOT NULL,
+  `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `client_tb`
+--
+
+CREATE TABLE `client_tb` (
+  `client_ID` int(11) NOT NULL,
+  `useranme` varchar(50) NOT NULL,
+  `firstname` varchar(200) NOT NULL,
+  `lastname` varchar(200) NOT NULL,
+  `email` varchar(200) NOT NULL,
+  `phone_number` varchar(20) NOT NULL,
+  `date_of_birth` varchar(60) NOT NULL,
+  `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -91,9 +127,7 @@ CREATE TABLE `company_tb` (
 --
 
 INSERT INTO `company_tb` (`company_ID`, `user_ID`, `company_name`, `category`, `phone_number`, `address`, `logo`, `timestamp`) VALUES
-(6, 2, 'Gasaro Shop', 'Private', '32414342', 'KK 4 Ave st', '72985292_115320180235679_7024697554493719041_o.png', '2020-08-01 17:17:10'),
-(7, 3, 'SmarTech Rwanda', 'Private', '0780782835', 'KK 4 Ave st', 'Logo2.png', '2020-08-01 17:23:10'),
-(8, 4, 'Nisma Shop', 'Private', '12311333', 'KK 4 Ave st', 'upload-productImg-1494664895729_320_234.jpeg', '2020-08-03 21:06:02');
+(1, 1, 'Gasaro Shop', 'Private', '078078258', 'Kigali-Rwanda-KK 4 Ave', '2589d113d3f73f5165bd0c7bcc7f32fb.jpg', '2020-08-09 18:59:29');
 
 -- --------------------------------------------------------
 
@@ -140,13 +174,7 @@ CREATE TABLE `product_tb` (
 --
 
 INSERT INTO `product_tb` (`ID`, `user_ID`, `company_ID`, `category_ID`, `subCategory_ID`, `pro_name`, `pro_brandName`, `pro_price`, `quantity`, `pro_option`, `pro_specification`, `express_number`, `image1`, `image2`, `image3`, `image4`, `timezone`) VALUES
-(1, 3, 7, 2, 1, 'Snikers', 'Nike', 20000, '2', 'Active', '<h4><span style=\"text-decoration: underline;\"><span style=\"font-weight: bold;\">Feature</span></span><br></h4><p>hgfghhlhlfdgklfdhgkfdg djkfgsfdjkgh kfdj gkdfg dfgksldhgdfgkljfdghgfghhlhlfdgklfdhgkfdg djkfgsfdjkgh kfdj gkdfg dfgksldhgdfgkljfdghgfghhlhlfdgklfdhgkfdg djkfgsfdjkgh kfdj gkdfg dfgksldhgdfgkljfdghgfghhlhlfdgklfdhgkfdg djkfgsfdjkgh kfdj gkdfg dfgksldhgdfgkljfdghgfghhlhlfdgklfdhgkfdg djkfgsfdjkgh kfdj gkdfg dfgksldhgdfgkljfdghgfghhlhlfdgklfdhgkfdg djkfgsfdjkgh kfdj gkdfg dfgksldhgdfgkljfdghgfghhlhlfdgklfdhgkfdg djkfgsfdjkgh kfdj gkdfg dfgksldhgdfgkljfdghgfghhlhlfdgklfdhgkfdg djkfgsfdjkgh kfdj gkdfg dfgksldhgdfgkljfdg</p>', 25017350112, 'd1.jpg', 'd2.jpg', 'd3.jpg', 'd1.jpg', '2020-08-02 20:34:18'),
-(2, 3, 7, 2, 0, 'Quartz', 'Quartz', 9000, '20', 'Active', 'jggjk', 25028042464, 'm7.jpg', 'w6.jpg', 'demoUpload.jpg', 'demoUpload.jpg', '2020-08-01 18:38:42'),
-(3, 3, 7, 6, 0, 'Lagguage', 'Puma', 20000, '12', 'Active', 'fdsfd', 25036720206, 'b2.jpg', 'b3.jpg', 'b1.jpg', 'b4.jpg', '2020-08-01 18:37:59'),
-(4, 2, 6, 3, 5, 'Hand Bag', 'Puma', 15500, '2', 'Active', 'gshh', 25017710587, 'b5.jpg', 'b8.jpg', 'b6.jpg', 'b7.jpg', '2020-08-02 16:36:30'),
-(5, 2, 6, 3, 2, 'Small Shoes', 'Nike', 20000, '2', 'Active', '<h5><span style=\"text-decoration: underline;\"><span style=\"font-weight: bold;\">ghughjhghgfhj</span></span></h5><h5>dfljgl;kfdsjg;ldfshgd;lfglkbndfkgkueavgfkdsufvkdsafhsdfvdsafhsdkfsadvfsdkjahvfhvfckvsfg iesgf dsgf oidsafkdsafdsa figfkjdsagkjf sjkgakgflkdsa fgdsaj kfghdsakjlggds fadsgfhdgkjfagf kasdgfkjdsa gfskdjajsdagfkdjsgfiewurgf dsafgafuadsgfdsa f gsdafgdsaiuf giudsagyf</h5>', 25046962656, 's5.jpg', 's5.jpg', 's5.jpg', 's5.jpg', '2020-08-02 21:41:30'),
-(6, 2, 6, 3, 11, 'Skerts', 'Fashion', 25000, '2', 'Active', '<p><span style=\"font-style: italic;\"><span style=\"font-weight: bold;\">Feature</span></span></p><ol><li>Size: 200mm</li><li>kgkjgdsjghsdgjkd</li><li>sdglkdsjgldsfjgldfg</li><li>lsdhgkjldhlkdshgl</li><li>dgldkshglkdshglkjhdsklg</li><li>sdf;gdslgkhdsgl;sdfg</li><li>sldfkjgklsdhglkhdsfghl</li><li>sdfglksdhglksdjhgkdlshgdgdsfg dfgkdshgdsg gdsfhgdsfhgd fshgdshlfkhglds gsdkjgh kdsghlsj kgl shdlkjghfdlg dkfslhg ldkfsg sldg</li><li>dgskjdhgsdhlgdsflg<br></li></ol>', 25039273521, 'w3.jpg', 'w2.jpg', 'w4.jpg', 'w8.jpg', '2020-08-02 20:54:32'),
-(7, 2, 6, 3, 2, 'Wedding shoe', 'Nike', 15000, '2', 'Active', '<p>dfklhdshsfdgsdfgh gdslfkhgd dfsj hglkjfdshgdskljf hgksldfghdklsjfhg ldkfshgdsfhgdhg lkdjfssssssssssshgkldf hgkdfshgflkjdsglsdfhg lkdsfjglsdhf kglsdfjg sldffhgldfglkdfhgkldfhglkdf vjkbcxbvvxcmnbvxmcv xcmbvmxc,bvbcxvidgshiuergtirreoiuwfdsgbfdhgkg irewohgrdsklgfhlkflsadkfsdailfeir ufdsuiafhdsif ioaeuhrieogt fds fkgdsilgieosg rtdsf<br></p>', 25013991903, 's8.jpg', 's8.jpg', 's8.jpg', 's8.jpg', '2020-08-02 21:45:12');
+(1, 1, 1, 2, 11, 'Mini USB Adapter', 'Samsung', 1000, '5', 'Active', '<h3 style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px none; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-stretch: inherit; font-size: medium; line-height: inherit; vertical-align: baseline; color: rgb(0, 0, 0); letter-spacing: normal; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial; overflow-wrap: break-word;\"><span style=\"font-family: Arial;\"><span style=\"font-weight: bold;\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px none; font-variant: inherit; font-stretch: inherit; font-size: 24px; line-height: inherit;\" times=\"\" new=\"\" roman\";=\"\" vertical-align:=\"\" baseline;\"=\"\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px none; font-variant: inherit; font-stretch: inherit; font-size: 24px; line-height: inherit;\" times=\"\" new=\"\" roman\";=\"\" vertical-align:=\"\" baseline;\"=\"\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px none; font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; vertical-align: baseline; overflow-wrap: break-word;\">Factory price Hot Selling Micro USB To USB OTG Mini Adapter Converter For Android SmartPhone Free Shipping Suppion</span></span></span></span></span></h3><blockquote><p style=\"   box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: medium; line-height: inherit; font-family: Helvetica; vertical-align: baseline; color: rgb(0, 0, 0); letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial; overflow-wrap: break-word;\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: 24px; line-height: inherit; font-family: \" times=\"\" new=\"\" roman\";=\"\" vertical-align:=\"\" baseline;\"=\"\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: 24px; line-height: inherit; font-family: \" times=\"\" new=\"\" roman\";=\"\" vertical-align:=\"\" baseline;\"=\"\">Feature</span><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: 14pt; line-height: inherit; font-family: arial; vertical-align: baseline; color: black;\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: 24px; line-height: inherit; font-family: \" times=\"\" new=\"\" roman\";=\"\" vertical-align:=\"\" baseline;\"=\"\">:</span></span></span></p><ul style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: medium; line-height: inherit; font-family: Helvetica; vertical-align: baseline; list-style: none; color: rgb(0, 0, 0); letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;\"><li style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: Helvetica; vertical-align: baseline;\"><p style=\"   box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: Helvetica; vertical-align: baseline; overflow-wrap: break-word;\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: 24px; line-height: inherit; font-family: \" times=\"\" new=\"\" roman\";=\"\" vertical-align:=\"\" baseline;\"=\"\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: 24px; line-height: inherit; font-family: \" times=\"\" new=\"\" roman\";=\"\" vertical-align:=\"\" baseline;\"=\"\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: 24px; line-height: inherit; font-family: \" times=\"\" new=\"\" roman\";=\"\" vertical-align:=\"\" baseline;\"=\"\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: 24px; line-height: inherit; font-family: \" times=\"\" new=\"\" roman\";=\"\" vertical-align:=\"\" baseline;\"=\"\">Small and delicate. Easy to carry</span></span></span></span></p></li><li style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: Helvetica; vertical-align: baseline;\"><p style=\"   box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: Helvetica; vertical-align: baseline; overflow-wrap: break-word;\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: 24px; line-height: inherit; font-family: \" times=\"\" new=\"\" roman\";=\"\" vertical-align:=\"\" baseline;\"=\"\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: 24px; line-height: inherit; font-family: \" times=\"\" new=\"\" roman\";=\"\" vertical-align:=\"\" baseline;\"=\"\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: 24px; line-height: inherit; font-family: \" times=\"\" new=\"\" roman\";=\"\" vertical-align:=\"\" baseline;\"=\"\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: 24px; line-height: inherit; font-family: \" times=\"\" new=\"\" roman\";=\"\" vertical-align:=\"\" baseline;\"=\"\">Plug and play. Fast and convenient.</span></span></span></span></p></li><li style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: Helvetica; vertical-align: baseline;\"><p style=\"   box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: Helvetica; vertical-align: baseline; overflow-wrap: break-word;\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: 24px; line-height: inherit; font-family: \" times=\"\" new=\"\" roman\";=\"\" vertical-align:=\"\" baseline;\"=\"\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: 24px; line-height: inherit; font-family: \" times=\"\" new=\"\" roman\";=\"\" vertical-align:=\"\" baseline;\"=\"\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: 24px; line-height: inherit; font-family: \" times=\"\" new=\"\" roman\";=\"\" vertical-align:=\"\" baseline;\"=\"\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: 24px; line-height: inherit; font-family: \" times=\"\" new=\"\" roman\";=\"\" vertical-align:=\"\" baseline;\"=\"\">Extended jack, no need to take off the Phone cover when used.</span></span></span></span></p></li><li style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: Helvetica; vertical-align: baseline;\"><p style=\"   box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: Helvetica; vertical-align: baseline; overflow-wrap: break-word;\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: 24px; line-height: inherit; font-family: \" times=\"\" new=\"\" roman\";=\"\" vertical-align:=\"\" baseline;\"=\"\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: 24px; line-height: inherit; font-family: \" times=\"\" new=\"\" roman\";=\"\" vertical-align:=\"\" baseline;\"=\"\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: 24px; line-height: inherit; font-family: \" times=\"\" new=\"\" roman\";=\"\" vertical-align:=\"\" baseline;\"=\"\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: 24px; line-height: inherit; font-family: \" times=\"\" new=\"\" roman\";=\"\" vertical-align:=\"\" baseline;\"=\"\">Compatible to Smartphone with Android system and various digital devices</span></span></span></span></p></li></ul><p style=\"   box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: medium; line-height: inherit; font-family: Helvetica; vertical-align: baseline; color: rgb(0, 0, 0); letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial; overflow-wrap: break-word;\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: 24px; line-height: inherit; font-family: \" times=\"\" new=\"\" roman\";=\"\" vertical-align:=\"\" baseline;\"=\"\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: 24px; line-height: inherit; font-family: \" times=\"\" new=\"\" roman\";=\"\" vertical-align:=\"\" baseline;\"=\"\">Notice item and picture may be small differences in color</span></span></p><p style=\"   box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: medium; line-height: inherit; font-family: Helvetica; vertical-align: baseline; color: rgb(0, 0, 0); letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial; overflow-wrap: break-word;\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: 24px; line-height: inherit; font-family: \" times=\"\" new=\"\" roman\";=\"\" vertical-align:=\"\" baseline;\"=\"\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: 24px; line-height: inherit; font-family: \" times=\"\" new=\"\" roman\";=\"\" vertical-align:=\"\" baseline;\"=\"\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: 24px; line-height: inherit; font-family: \" times=\"\" new=\"\" roman\";=\"\" vertical-align:=\"\" baseline;\"=\"\">OTG compatibility this is micro USB OTG interface, support micro USB interface, and the need to support OTG protocol make sure the phone support OTG function</span></span></span></p><p style=\"   box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: medium; line-height: inherit; font-family: Helvetica; vertical-align: baseline; color: rgb(0, 0, 0); letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial; overflow-wrap: break-word;\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: 24px; line-height: inherit; font-family: \" times=\"\" new=\"\" roman\";=\"\" vertical-align:=\"\" baseline;\"=\"\">Specifications:</span></p><ul style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: medium; line-height: inherit; font-family: Helvetica; vertical-align: baseline; list-style: none; color: rgb(0, 0, 0); letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;\"><li style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: Helvetica; vertical-align: baseline;\"><p style=\"   box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: Helvetica; vertical-align: baseline; overflow-wrap: break-word;\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: 24px; line-height: inherit; font-family: \" times=\"\" new=\"\" roman\";=\"\" vertical-align:=\"\" baseline;\"=\"\">Type: otg adapter</span></p></li><li style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: Helvetica; vertical-align: baseline;\"><p style=\"   box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: Helvetica; vertical-align: baseline; overflow-wrap: break-word;\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: 24px; line-height: inherit; font-family: \" times=\"\" new=\"\" roman\";=\"\" vertical-align:=\"\" baseline;\"=\"\">Name: OTG adapter</span></p></li><li style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: Helvetica; vertical-align: baseline;\"><p style=\"   box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: Helvetica; vertical-align: baseline; overflow-wrap: break-word;\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: 24px; line-height: inherit; font-family: \" times=\"\" new=\"\" roman\";=\"\" vertical-align:=\"\" baseline;\"=\"\">Adapter: Standard USB port Micro USB connector</span></p></li><li style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: Helvetica; vertical-align: baseline;\"><p style=\"   box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: Helvetica; vertical-align: baseline; overflow-wrap: break-word;\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: 24px; line-height: inherit; font-family: \" times=\"\" new=\"\" roman\";=\"\" vertical-align:=\"\" baseline;\"=\"\">Adapter: standard USB port Micro USB connector</span></p></li><li style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: Helvetica; vertical-align: baseline;\"><p style=\"   box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: Helvetica; vertical-align: baseline; overflow-wrap: break-word;\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: 24px; line-height: inherit; font-family: \" times=\"\" new=\"\" roman\";=\"\" vertical-align:=\"\" baseline;\"=\"\">Inspection: products have to undergo a high level 5 quality inspection</span></p></li></ul><p style=\"   box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: medium; line-height: inherit; font-family: Helvetica; vertical-align: baseline; color: rgb(0, 0, 0); letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial; overflow-wrap: break-word;\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: 24px; line-height: inherit; font-family: \" times=\"\" new=\"\" roman\";=\"\" vertical-align:=\"\" baseline;\"=\"\">Package included:</span></p><ul style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: medium; line-height: inherit; font-family: Helvetica; vertical-align: baseline; list-style: none; color: rgb(0, 0, 0); letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;\"><li style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: Helvetica; vertical-align: baseline;\"><p style=\"   box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: Helvetica; vertical-align: baseline; overflow-wrap: break-word;\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: 24px; line-height: inherit; font-family: \" times=\"\" new=\"\" roman\";=\"\" vertical-align:=\"\" baseline;\"=\"\">1 x Micro USB To USB OTG Adapter</span></p></li></ul></blockquote>', 2508161600, '2589d113d3f73f5165bd0c7bcc7f32fb.jpg', '2589d113d3f73f5165bd0c7bcc7f32fb.jpg', 'demoUpload.jpg', 'demoUpload.jpg', '2020-08-13 12:27:07');
 
 -- --------------------------------------------------------
 
@@ -166,17 +194,18 @@ CREATE TABLE `sub_category_tb` (
 --
 
 INSERT INTO `sub_category_tb` (`subCategory_ID`, `category_ID`, `sub_category_name`, `status`) VALUES
-(1, 2, 'Shoes', 'Active'),
-(2, 3, 'Shoes', 'Active'),
-(3, 2, 'Fashion', 'Active'),
-(4, 2, 'Bags', 'Active'),
-(5, 3, 'Bags', 'Active'),
-(6, 2, 'Watch', 'Active'),
-(7, 1, 'About', 'Active'),
-(8, 1, 'Contact', 'Active'),
-(9, 4, 'Vegatables', 'Active'),
-(10, 5, 'Phone', 'Active'),
-(11, 3, 'Clothes', 'Active');
+(1, 1, 'Keyboard&Mouse', 'Active'),
+(2, 1, 'Storage', 'Active'),
+(3, 1, 'Networking', 'Active'),
+(4, 1, 'Other Computer', 'Active'),
+(5, 2, 'Headphone&Earphone', 'Active'),
+(6, 2, 'Bluetooth Headset', 'Active'),
+(7, 2, 'Bags&Cases', 'Active'),
+(8, 2, 'Holders&Stands', 'Active'),
+(9, 2, 'Memory Card', 'Active'),
+(10, 2, 'Screen Protector', 'Active'),
+(11, 2, 'Cables&Chargers', 'Active'),
+(12, 2, 'Mobile Phones', 'Active');
 
 -- --------------------------------------------------------
 
@@ -206,9 +235,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_ID`, `username`, `firstname`, `lastname`, `email`, `password`, `phone`, `address`, `city`, `state`, `zip`, `position`, `user_img`, `timestamp`) VALUES
-(2, 'NAFIATH', 'GASARO', 'NAFIATH', 'nafiathgass@gmail.com', 'def419ff9c6d91a79f79cb433942fcd5', '546365455', '342Main R', 'Kigali city', 'Rwanda', '250', 'Managera', 'IMG-20190525-WA0006.jpg', '2020-08-01 17:16:25'),
-(3, 'Muhamudu', 'NDAYISHIMIYE', 'MUHAMUDU', 'ndayishimiyemuhamadu@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '0780782835', 'KK 4 Ave st', 'Kigali', 'Rwanda', '00250', 'CEO', 'DfaultProfileImage.png', '2020-08-01 17:22:32'),
-(4, 'Nisma', 'ISIMBI', 'Nisma', 'nisma@gmail.com', '202cb962ac59075b964b07152d234b70', '213213112', '123 Main Road', 'Kigali', 'Rwanda', '00250', 'CEO', 'DfaultProfileImage.png', '2020-08-03 21:03:37');
+(1, 'Nafiat', 'GASARO', 'Nafiath', 'nafiath@gmail.com', '202cb962ac59075b964b07152d234b70', '0780782837', 'Kicukiro', 'Kigali', 'Rwanda', '00250', 'CEO', 'upload-productImg-1594257519132.jpeg', '2020-08-09 18:58:44');
 
 --
 -- Indexes for dumped tables
@@ -227,6 +254,18 @@ ALTER TABLE `admin_tb`
 --
 ALTER TABLE `category_tb`
   ADD PRIMARY KEY (`category_ID`);
+
+--
+-- Indexes for table `client_order_tb`
+--
+ALTER TABLE `client_order_tb`
+  ADD PRIMARY KEY (`order_ID`);
+
+--
+-- Indexes for table `client_tb`
+--
+ALTER TABLE `client_tb`
+  ADD PRIMARY KEY (`client_ID`);
 
 --
 -- Indexes for table `company_tb`
@@ -275,10 +314,20 @@ ALTER TABLE `admin_tb`
 ALTER TABLE `category_tb`
   MODIFY `category_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
+-- AUTO_INCREMENT for table `client_order_tb`
+--
+ALTER TABLE `client_order_tb`
+  MODIFY `order_ID` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `client_tb`
+--
+ALTER TABLE `client_tb`
+  MODIFY `client_ID` int(11) NOT NULL AUTO_INCREMENT;
+--
 -- AUTO_INCREMENT for table `company_tb`
 --
 ALTER TABLE `company_tb`
-  MODIFY `company_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `company_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `product_feedback_tb`
 --
@@ -288,17 +337,17 @@ ALTER TABLE `product_feedback_tb`
 -- AUTO_INCREMENT for table `product_tb`
 --
 ALTER TABLE `product_tb`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `sub_category_tb`
 --
 ALTER TABLE `sub_category_tb`
-  MODIFY `subCategory_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `subCategory_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;COMMIT;
+  MODIFY `user_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
