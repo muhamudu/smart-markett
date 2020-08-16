@@ -8,7 +8,7 @@
 	//lOGIN USERNAME INFORMATION
 	$user_id=$_SESSION['USER_ID'];
 
-	$result=mysqli_query($DB_CONNECT,"SELECT * FROM users WHERE user_ID='$user_id'")or die("mysql_error".mysql_error());
+	$result=mysqli_query($DB_CONNECT,"SELECT * FROM users WHERE user_ID='$user_id'")or die("mysql_error".mysqli_error($DB_CONNECT));
 	$row=mysqli_fetch_array($result);
 
 	$username = $row['username'];

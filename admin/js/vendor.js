@@ -5,7 +5,27 @@ $(document).ready(function(){
       var me=cl+num;
       $('#express_id').attr('value',me);
     });
-  });
+
+    $("#Faddproduct").submit(function (e) { 
+        e.preventDefault();
+        $('.toast').toast('show');
+        var form=$(this).serialize();
+        $.ajax({
+            type: "POST",
+            url: $(this).attr('action'),
+            data: form,
+            success: function (response) {
+                if(response!='succeess'){
+                    $(".formResponse").html(response);
+                }
+                else{
+                    alert('product Saved');
+                    $(this).reset();
+                }
+            }
+        });
+    });
+});
 
 // ====================================================================================================================
 
